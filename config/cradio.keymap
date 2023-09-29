@@ -87,7 +87,7 @@ lm: lm {
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &lt &lm MOUSE SEMI ENTER
+                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &ht &lm MOUSE SEMI ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -128,9 +128,9 @@ lm: lm {
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
            &trans       &trans     &kp W     &trans    &trans          &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &trans      &kp A       &kp S     &kp D        &trans         &trans     &kp J      &kp K      &trans     &trans
+           &kp LSHFT    &kp A       &kp S     &kp D     &trans         &trans     &kp J      &kp K      &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LSHFT  &trans     &trans    &trans      &trans         &trans     &trans     &trans     &trans     &trans
+            &trans      &trans     &trans    &trans      &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp SPACE   &kp LALT       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
