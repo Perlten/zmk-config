@@ -87,7 +87,7 @@ lm: lm {
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &ht &lm MOUSE SEMI ENTER
+                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &ht lm MOUSE SEMI ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
