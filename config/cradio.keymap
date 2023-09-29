@@ -15,7 +15,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <j j>;
+            key-positions = <16 16>;
             bindings = <&kp ESC>;
         };
     };
@@ -38,7 +38,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <16 16>;
+            if-layers = <1 2>;
             then-layer = <3>;
         };
     };
