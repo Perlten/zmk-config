@@ -9,11 +9,12 @@
 #define NAVIGATION 1
 #define SYMBOL 2
 #define MOUSE 3
-#define TRI 4
+#define WTILE 4
+#define TRI 5
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4  
+#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht LALT k3  &ht RSHFT k4  
 
 
 /*                KEY POSITIONS
@@ -50,7 +51,7 @@ lm: lm {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <200>;
-            key-positions = <26 26>;
+            key-positions = <16 16>;
             bindings = <&kp ESC>;
         };
     };
@@ -83,7 +84,7 @@ lm: lm {
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
               &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O     &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
+            HRML(A,        S,         D,         F)   &lt WTILE G        &lt WTILE H      HRMR(J,        K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -130,9 +131,23 @@ lm: lm {
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &kp LSHFT    &kp A       &kp S     &kp D     &trans         &trans     &kp J      &kp K      &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &trans      &trans     &trans    &trans      &trans         &trans     &trans     &trans     &trans     &trans
+            &kp LCTRL      &trans     &trans    &trans      &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp SPACE   &kp LALT       &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        wtile_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+           &trans       &trans     &trans     &trans    &trans          &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+           &trans       &trans     &trans     &trans    &kp P          &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &trans      &trans     &trans    &trans      &trans         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
