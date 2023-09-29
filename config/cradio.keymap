@@ -53,7 +53,7 @@
             bindings
                 = <&macro_press &kp LMETA>
                 , <&macro_param_1to1>
-                , <&kp MACRO_PLACEHOLDER>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp LMETA>
                 ;
         };
