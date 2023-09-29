@@ -28,7 +28,10 @@
     layers = <LAYERS>; \
   };
 
-COMBO(esc, &kp ESC, 16 16, BASE);
+ combos {
+    compatible = "zmk,combos";
+    COMBO(esc, &kp ESC, 16 16, BASE);
+  };
 
 
 / {
