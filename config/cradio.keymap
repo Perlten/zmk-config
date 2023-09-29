@@ -57,7 +57,8 @@
                 , <&macro_release &kp LMETA>
                 ;
         };
-    }
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -138,13 +139,13 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &trans       &trans     &kp W     &trans    &trans          &trans     &trans     &trans     &trans    &trans
+           &none       &none     &kp W     &none          &none          &none     &none     &none     &none    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A       &kp S     &kp D     &trans         &trans     &kp J      &kp K      &trans     &trans
+           &kp LSHFT    &kp A       &kp S     &kp D     &none         &none     &kp J      &kp K      &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL      &trans     &trans    &trans      &trans         &trans     &trans     &trans     &trans     &trans
+            &kp LCTRL      &none     &none    &none      &none         &none     &none     &none     &none     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE   &kp LALT       &trans     &trans
+                                             &kp SPACE   &kp LALT       &none     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
