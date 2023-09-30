@@ -142,7 +142,7 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &none       &none     &kp W     &none          &none        &none     &none     &none         &none    &tog GAMER
+           &none       &none     &kp W     &none          &none        &none     &none     &none         &none       &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &kp LSHFT    &kp A       &kp S     &kp D     &none         &none     &kp J      &kp K      &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -158,11 +158,11 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
            &ww Q       &none        &none     &none    &none            &wwin Q     &none     &none     &none    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &ww N5      &ww N4     &ww N3    &ww N2      &ww N1         &wwin N1  &wwin N2   &wwin N3   &wwin N4   &wwin N5
+            &ww N9      &ww N7     &ww N5    &ww N3      &ww N1         &wwin N1  &wwin N3   &wwin N5   &wwin N7   &wwin N9
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-             &none     &ww N9     &ww N8    &ww N7      &ww N6         &wwin N6    &wwin N7   &wwin N8   &wwin N9     &none
+             &none     &ww N8     &ww N6    &ww N4      &ww N2         &wwin N2    &wwin N4   &wwin N6   &wwin N8     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LSHFT  &none         &kp LSHFT      &none
+                                             &kp LSHFT  &none          &none     &kp LSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -170,11 +170,11 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │          │
+          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
@@ -187,11 +187,11 @@
         gamer_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &kp TAB     &kp Q     &kp W         &kp E    &kp R          &none     &none     &none         &none    &tog GAMER
+           &kp TAB     &kp Q     &kp W         &kp E    &kp R          &kp T    &none     &none         &none    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &kp LSHFT    &kp A       &kp S     &kp D     &kp F         &none     &kp J      &kp K      &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &kp Z     &kp X      &kp C      &kp V         &none     &none     &none     &none     &none
+            &kp LCTRL   &kp Z     &kp X      &kp C      &kp V         &kp B     &none     &none     &none     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp SPACE   &kp LALT       &none     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
