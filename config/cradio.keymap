@@ -47,26 +47,26 @@
                 , <&macro_release &mo MACRO_PLACEHOLDER>
                 ;
         };
-        ww: ww {
-            label = "WTILE_WORKSPACE_SWITCH";
+        wtquit: wtquit {
+            label = "WTILE_QUIT";
             compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LMETA>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Q>
+                , <&macro_release &kp LSHFT>
                 , <&macro_release &kp LMETA>
                 ;
         };
-        wwin: wwin {
-            label = "WTILE_WINDOW_SWITCH";
+        wtadd: wtadd {
+            label = "WTILE_ADD";
             compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LALT>
+                = <&macro_press &kp LMETA>
+                , <&macro_tap &kp W>
+                , <&macro_release &kp LMETA>
                 ;
         };
     };
@@ -149,11 +149,11 @@
         wtile_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &none       &none        &none     &none    &none            &wwin Q     &none     &none     &none    &none
+          &none       &none        &wtadd     &none    &none            &none     &none     &none       &none      &wtquit
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp N9      &kp N7     &kp N5    &kp N3      &kp N1         &none     &none     &none       &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp N0     &kp N8     &kp N6      &kp N4      &kp N2         &none     &none     &none       &none      &none
+            &kp N0     &kp N8     &kp N6      &kp N4     &kp N2         &none     &none     &none       &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LSHFT  &kp Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
