@@ -136,11 +136,11 @@
 
         symbol_layer {
             bindings = <
-           &trans  &none     &none   &none              &trans       &none  &none              &none              &none   &none
-           &none   &none     &none   &ht LS(N9) LS(N8)  &none        &none  &ht BSLH LS(N2)    &ht RA(N0) RA(N7)  &none   &none
+           &trans  &none     &none   &ht EXCL RPAR      &ht LS(NUBS) RA(NUBS)       &ht RA(N0) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
+           &none   &none     &none   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
         //                                                       ┼
-           &trans  &trans    &trans  &trans             &trans       &none  &none              &none              &none   &trans
-                                              &trans    &trans       &trans    &trans
+           &trans  &trans    &trans  &trans             &trans                      &none                  &none              &none              &none   &trans
+                                              &trans    &trans                                  &trans    &trans
             >;
         };
 
