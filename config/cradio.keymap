@@ -12,6 +12,7 @@
 #define WTILE 4
 #define TRI 5
 #define GAMER 6
+#define MEDIA 7
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -109,7 +110,7 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-              &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O     &kp P
+          &lt MEDIA Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O     &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             HRML(A,        S,         D,         F)   &lt WTILE G     &lt WTILE H  HRMR(J,     K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -136,10 +137,9 @@
 
         symbol_layer {
             bindings = <
-           &trans  &none     &none   &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
-           &none   &none     &none   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
-        //                                                       ┼
-           &trans  &trans    &trans  &trans             &trans                      &none                  &none              &none              &none   &trans
+           &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
+           &kp LS(FSLH)    &ht PIPE LS(N3)  &ht MINUS LS(FSLH)   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
+           &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
                                               &trans    &trans                                  &trans    &trans
             >;
         };
@@ -192,13 +192,27 @@
         gamer_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &kp TAB     &kp Q     &kp W         &kp E    &kp R          &kp T    &none     &none         &none    &tog GAMER
+           &ht TAB ESC  &kp Q     &kp W         &kp E    &kp R          &kp T    &none     &none         &none    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &kp LSHFT    &kp A       &kp S     &kp D     &kp F         &none     &kp J      &kp K      &none     &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp LCTRL   &kp Z     &kp X      &kp C      &kp V         &kp B     &none     &none     &none     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp SPACE   &kp LALT       &kp LMETA &kp LALT
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+    
+        media_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+           &none        &none     &none         &none    &none          &none    &none     &none         &none    &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+           &none        &none       &none   &kp C_PREV &kp C_NEXT        &none      &kp C_VOL_UP &kp C_VOL_DN  &kp C_PP    &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &none      &none     &none        &none      &none            &none  &kp C_MUTE     &none     &none     &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &none   &none              &none     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
