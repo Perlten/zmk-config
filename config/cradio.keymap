@@ -137,8 +137,10 @@
 
         symbol_layer {
             bindings = <
+        //                                      @        $            !    =               >      <                 ]       [                |         &                                                       
            &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
-           &kp LS(FSLH)    &ht PIPE LS(N3)  &ht MINUS LS(FSLH)   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
+        //     _                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
+           &kp LS(FSLH)    &ht PIPE LS(N3)  &ht MINUS FSLH   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
            &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
                                               &trans    &trans                                  &trans    &trans
             >;
