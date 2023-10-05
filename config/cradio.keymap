@@ -125,7 +125,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time 5>
+                = <&macro_tap_time 0>
                 , <&macro_tap &kp UP_ARROW>
                 , <&macro_tap &kp UP_ARROW>
                 , <&macro_tap &kp UP_ARROW>
