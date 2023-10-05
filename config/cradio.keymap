@@ -156,8 +156,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <50>;
             global-quick-tap;
+            retro-tap;
             bindings = <&lm>, <&sl>;
         };
     };
@@ -247,7 +248,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &wcw N0     &wcw N8     &wcw N6  &wcw N4    &wcw N2      &wcwin N2   &wcwin N4   &wcwin N6  &wcwin N8   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LSHFT  &kp Q        &kp LALT  &kp LMETA
+                                             &wcw Q     &wcwin Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
