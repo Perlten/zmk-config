@@ -129,12 +129,12 @@
             bindings = <&kp>, <&kp>;
         };
         htw: hold_tab_wtile {
-            label = "hold_tap";
+            label = "hold_tap_wtile";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <100>;
             global-quick-tap;
             bindings = <&lm>, <&sl>;
         };
