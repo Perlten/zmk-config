@@ -14,6 +14,7 @@
 #define TRI 6
 #define GAMER 7
 #define MEDIA 8
+#define NUMBER 9
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -155,8 +156,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <100>;
-            quick-tap-ms = <100>;
+            tapping-term-ms = <150>;
             global-quick-tap;
             bindings = <&lm>, <&sl>;
         };
@@ -177,7 +177,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
           &lt MEDIA Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O  &lt MEDIA P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            HRML(A,        S,         D,         F)   &lt WTILE G     &lt WTILE H  HRMR(J,     K,         L,        SEMI)
+            HRML(A,        S,         D,         F)   &lt WTILE G     &lt NUMBER H  HRMR(J,     K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -243,9 +243,9 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &wcw N9      &wcw N7     &wcw N5  &wcw N3   &wcw N1       &wcwin N9  &wcwin N7  &wcwin N5  &wcwin N3   &wcwin N1
+            &wcw N9      &wcw N7     &wcw N5  &wcw N3   &wcw N1       &wcwin N1  &wcwin N3  &wcwin N5  &wcwin N7   &wcwin N9
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &wcw N0     &wcw N8     &wcw N6  &wcw N4    &wcw N2      &wcwin N9   &wcwin N7   &wcwin N5  &wcwin N3   &wcwin N1
+            &wcw N0     &wcw N8     &wcw N6  &wcw N4    &wcw N2      &wcwin N2   &wcwin N4   &wcwin N6  &wcwin N8   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LSHFT  &kp Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
