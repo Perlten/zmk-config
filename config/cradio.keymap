@@ -88,7 +88,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time 10>
+                = <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
+                , <&macro_press &kp DOWN_ARROW>
                 , <&macro_press &kp DOWN_ARROW>
                 ;
         };
@@ -97,7 +105,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time 10>
+                = <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
+                , <&macro_press &kp UP_ARROW>
                 , <&macro_press &kp UP_ARROW>
                 ;
         };
