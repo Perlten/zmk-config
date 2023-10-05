@@ -132,6 +132,16 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+        htw: hold_tab_wtile {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&lm MOUSE SEMI>, <&sl WTILE>;
+        };
     };
 
     conditional_layers {
@@ -153,7 +163,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &lm MOUSE SEMI
+                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &htw
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -213,7 +223,7 @@
         wtile_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &wtquit       &none    &wtadd     &none    &none            &none     &none     &wtremove   &none      &none
+            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove         &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp N9      &kp N7     &kp N5    &kp N3      &kp N1         &none     &none     &none       &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
