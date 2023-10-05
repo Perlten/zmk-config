@@ -135,7 +135,7 @@
         htw: hold_tab_wtile {
             label = "hold_tap";
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
