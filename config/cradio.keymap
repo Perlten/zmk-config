@@ -7,12 +7,13 @@
 
 #define BASE 0
 #define NAVIGATION 1
-#define SYMBOL 2
-#define MOUSE 3
-#define WTILE 4
-#define TRI 5
-#define GAMER 6
-#define MEDIA 7
+#define NAVIGATION_SECOND 2
+#define SYMBOL 3
+#define MOUSE 4
+#define WTILE 5
+#define TRI 6
+#define GAMER 7
+#define MEDIA 8
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -82,6 +83,25 @@
                 , <&macro_release &kp LMETA>
                 ;
         };
+        tendown: tendown {
+            label = "TEN_DOWN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap_time 10>
+                , <&macro_press &kp DOWN_ARROW>
+                ;
+        };
+        tenup: tenup {
+            label = "TEN_UP";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap_time 10>
+                , <&macro_press &kp UP_ARROW>
+                ;
+        };
+        }
     };
 
     behaviors {
@@ -126,7 +146,20 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
          //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp HOME  &kp LALT    &kp LCTRL    &kp N6     &kp END       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &kp HOME  &kp LALT  &mo NAVIGATION_SECOND    &kp N6     &kp END       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+           &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &none    &none           &kp ESC  &kp ENTER
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        navigation_second_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
+         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &kp HOME  &kp LALT    &none    &kp N6     &kp END       &kp LARW      &tendown   &tenup   &kp RARW   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
