@@ -88,16 +88,17 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
-                , <&macro_press &kp DOWN_ARROW>
+                = <&macro_tap_time 5>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
+                , <&macro_tab &kp DOWN_ARROW>
                 ;
         };
         tenup: tenup {
@@ -105,17 +106,17 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time 10>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
-                , <&macro_press &kp UP_ARROW>
+                = <&macro_tap_time 5>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
+                , <&macro_tab &kp UP_ARROW>
                 ;
         };
     };
