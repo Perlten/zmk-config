@@ -79,6 +79,28 @@
                 , <&macro_release &kp LMETA>
                 ;
         };
+        wcw: wcw {
+            label = "WTILE_CHANGE_WORKSPACE";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LMETA>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LMETA>
+                ;
+        };
+        wcwin: wcwin {
+            label = "WTILE_CHANGE_WINDOW";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LALT>
+                ;
+        };
         tendown: tendown {
             label = "TEN_DOWN";
             compatible = "zmk,behavior-macro";
@@ -219,11 +241,11 @@
         wtile_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove         &none
+            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp N9      &kp N7     &kp N5    &kp N3      &kp N1         &none     &none     &none       &none      &none
+            &wcw N9      &wcw N7     &wcw N5  &wcw N3   &wcw N1       &wcwin N9  &wcwin N7  &wcwin N5  &wcwin N3   &wcwin N1
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp N0     &kp N8     &kp N6      &kp N4     &kp N2         &none     &none     &none       &none      &none
+            &wcw N0     &wcw N8     &wcw N6  &wcw N4    &wcw N2      &wcwin N9   &wcwin N7   &wcwin N5  &wcwin N3   &wcwin N1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LSHFT  &kp Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -271,6 +293,19 @@
             &none      &none     &none        &none      &none            &none  &kp C_MUTE     &none     &none     &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &none   &none              &none     &none
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        number_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            &none     &none     &none     &none    &none                &none     &none        &none    &none         &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &kp N9      &kp N7     &kp N5    &kp N3      &kp N1         &none     &none     &none       &none      &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &kp N0     &kp N8     &kp N6      &kp N4     &kp N2         &none     &none     &none       &none      &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &kp LSHFT  &kp Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
