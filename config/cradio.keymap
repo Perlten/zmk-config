@@ -244,9 +244,9 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &wcw N9      &wcw N7     &wcw N5  &wcw N3   &wcw N1       &wcwin N1  &wcwin N3  &wcwin N5  &wcwin N7   &wcwin N9
+            &wcw N1    &wcw N2     &wcw N3  &wcw N4      &wcw N5       &wcwin N1  &wcwin N2  &wcwin N3  &wcwin N4   &wcwin N5
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &wcw N0     &wcw N8     &wcw N6  &wcw N4    &wcw N2      &wcwin N2   &wcwin N4   &wcwin N6  &wcwin N8   &none
+            &wcw N6     &wcw N7     &wcw N8  &wcw N9    &wcw N0      &wcwin N6   &wcwin N7   &wcwin N8  &wcwin N9   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &wcw Q     &wcwin Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
