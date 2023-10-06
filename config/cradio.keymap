@@ -183,7 +183,7 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&wccw>, <&wcw>;
-        }
+        };
     };
 
     conditional_layers {
