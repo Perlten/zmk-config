@@ -100,8 +100,8 @@
                 , <&macro_press &kp LSHFT>
                 , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LMETA>
                 , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LMETA>
                 ;
         };
         wcwin: wcwin {
@@ -112,6 +112,19 @@
                 = <&macro_press &kp LALT>
                 , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        wccwin: wccwin {
+            label = "WTILE_CHANGE_WINDOW_INDEX";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_press &kp LSHFT>
                 , <&macro_release &kp LALT>
                 ;
         };
@@ -183,6 +196,16 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             bindings = <&wccw>, <&wcw>;
+        };
+        htwcwin: htwcwin {
+            label = "hold_tap_change_workspace";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&wccwin>, <&wcwin>;
         };
     };
 
@@ -267,11 +290,11 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &htwcw N1 N1 &htwcw N2 N2     &wcw N3  &wcw N4      &wcw N5       &wcwin N1  &wcwin N2  &wcwin N3  &wcwin N4   &wcwin N5
+          &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5  &htwcwin N1 N1  &htwcwin N2 N2   &htwcwin N3 N3  &htwcwin N4 N4   &htwcwin N5 N5
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &wcw N6     &wcw N7     &wcw N8  &wcw N9    &wcw N0      &wcwin N6   &wcwin N7   &wcwin N8  &wcwin N9   &none
+          &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none         &htwcwin N6 N6  &htwcwin N7 N7   &htwcwin N8 N8  &htwcwin N9 N9   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &wcw Q     &wcwin Q      &kp LSHFT  &kp LMETA
+                                             &wcw Q     &wcwin Q                &kp LSHFT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
