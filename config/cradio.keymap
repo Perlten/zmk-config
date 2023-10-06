@@ -175,7 +175,6 @@
             bindings = <&lm>, <&sl>;
         };
         htwcw: htwcw {
-
             label = "hold_tap_change_workspace";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -183,7 +182,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&wccw>, <&htwcw>;
+            bindings = <&wccw>, <&wcw>;
         }
     };
 
