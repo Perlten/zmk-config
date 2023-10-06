@@ -91,7 +91,7 @@
                 , <&macro_release &kp LMETA>
                 ;
         };
-        wccw: wcw {
+        wccw: wccw {
             label = "WTILE_CHANGE_WORKSPACE_INDEX";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
