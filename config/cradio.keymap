@@ -288,7 +288,7 @@
         wtile_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
+            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &kp C_PAUSE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
           &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5  &htwcwin N1 N1  &htwcwin N2 N2   &htwcwin N3 N3  &htwcwin N4 N4   &htwcwin N5 N5
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
