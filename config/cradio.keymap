@@ -198,7 +198,7 @@
             bindings = <&wccw>, <&wcw>;
         };
         htwcwin: htwcwin {
-            label = "hold_tap_change_workspace";
+            label = "hold_tap_change_window";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
