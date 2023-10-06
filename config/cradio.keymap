@@ -180,9 +180,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <1>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
             global-quick-tap;
-            retro-tap;
             bindings = <&wccw>, <&htwcw>;
         }
     };
