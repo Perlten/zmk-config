@@ -91,6 +91,19 @@
                 , <&macro_release &kp LMETA>
                 ;
         };
+        wccw: wcw {
+            label = "WTILE_CHANGE_WORKSPACE_INDEX";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LMETA>
+                = <&macro_press &kp LSHFT>
+                , <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_release &kp LMETA>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
         wcwin: wcwin {
             label = "WTILE_CHANGE_WINDOW";
             compatible = "zmk,behavior-macro-one-param";
@@ -161,6 +174,17 @@
             retro-tap;
             bindings = <&lm>, <&sl>;
         };
+        htwcw: htwcw {
+
+            label = "hold_tap_change_workspace";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1>;
+            global-quick-tap;
+            retro-tap;
+            bindings = <&wccw>, <&htwcw>;
+        }
     };
 
     conditional_layers {
@@ -239,12 +263,12 @@
             >;
         };
 
-        wtile_layer {
+
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &wcw N1    &wcw N2     &wcw N3  &wcw N4      &wcw N5       &wcwin N1  &wcwin N2  &wcwin N3  &wcwin N4   &wcwin N5
+          &htwcw N1 N1 &htwcw N2 N2     &wcw N3  &wcw N4      &wcw N5       &wcwin N1  &wcwin N2  &wcwin N3  &wcwin N4   &wcwin N5
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &wcw N6     &wcw N7     &wcw N8  &wcw N9    &wcw N0      &wcwin N6   &wcwin N7   &wcwin N8  &wcwin N9   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
