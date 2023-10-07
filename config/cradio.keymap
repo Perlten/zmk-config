@@ -213,14 +213,14 @@
             #binding-cells = <0>;
             bindings = <&tendown>, <&kp PG_DN>;
             mods = <(MOD_LSFT)>;
-        }
+        };
         tupu: tenup_or_pageup {
             compatible = "zmk,behavior-mod-morph";
             label = "TEN_UP_OR_PAGE_UP";
             #binding-cells = <0>;
             bindings = <&tenup>, <&kp PG_UP>;
             mods = <(MOD_LSFT)>;
-        }
+        };
     };
 
     conditional_layers {
