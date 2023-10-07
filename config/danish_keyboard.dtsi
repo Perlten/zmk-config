@@ -1,0 +1,3 @@
+#define _QMARK LS(MINUS)
+#define _MINUS FSLH
+#define _UNDERSCORE LS(FSLH)

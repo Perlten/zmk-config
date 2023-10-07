@@ -5,6 +5,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include "danish_keyboard.dtsi"
+
 #define BASE 0
 #define NAVIGATION 1
 #define NAVIGATION_SECOND 2
@@ -240,7 +242,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             HRML(A,        S,         D,         F)   &lt NUMBER G     &lt NUMBER H  HRMR(J,     K,         L,            SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA &ht LS(MINUS) DOT  &ht LS(FSLH) FSLH
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA &ht _QMARK DOT  &ht _UNDERSCORE _MINUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &htw 0 WTILE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
