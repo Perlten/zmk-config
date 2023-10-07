@@ -207,6 +207,20 @@
             global-quick-tap;
             bindings = <&wccwin>, <&wcwin>;
         };
+        tdpd: tendown_or_pagedown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TEN_DOWN_OR_PAGE_DOWN";
+            #binding-cells = <0>;
+            bindings = <&tendown>, <&kp PG_DN>;
+            mods = <(MOD_LSFT)>;
+        }
+        tupu: tenup_or_pageup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TEN_UP_OR_PAGE_UP";
+            #binding-cells = <0>;
+            bindings = <&tenup>, <&kp PG_UP>;
+            mods = <(MOD_LSFT)>;
+        }
     };
 
     conditional_layers {
@@ -238,7 +252,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
          //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp HOME  &kp LALT  &mo NAVIGATION_SECOND    &kp N6     &kp END       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &kp HOME  &kp LALT  &mo NAVIGATION_SECOND &kp N6     &kp END       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -251,11 +265,11 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
          //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp HOME  &kp LALT    &none    &kp N6     &kp END           &kp B     &tendown   &tenup   &kp E   &kp SEMI
+            &kp LSHFT  &kp LALT    &none    &kp N6     &kp END           &kp B     &tdpd      &tupu     &kp E   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none    &none           &kp ESC  &kp ENTER
+                                              &none    &none         &kp DELETE  &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
