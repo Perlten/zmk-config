@@ -233,6 +233,10 @@
         };
     };
 
+    &caps_word {
+        continue-list = <_UNDERSCORE _MINUS>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -242,7 +246,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             HRML(A,        S,         D,         F)   &lt NUMBER G     &lt NUMBER H  HRMR(J,     K,         L,            SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA &ht QMARK DOT  &ht UNDERSCORE MINUS
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA &ht _QMARK DOT  &ht _UNDERSCORE _MINUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &htw 0 WTILE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -276,7 +280,7 @@
         //                                      @        $            !    =               >      <                 ]       [                |         &                                                       
            &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
         //     _                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
-           &kp LS(FSLH)    &ht STAR HASH  &ht PLUS MINUS     &ht RPAR LPAR  &ht BSLH SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
+           &kp LS(FSLH)    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
            &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
                                               &trans    &trans                                  &trans    &trans
             >;
