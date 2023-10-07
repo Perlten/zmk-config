@@ -238,7 +238,7 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-          &lt MEDIA Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O         &lt MEDIA P
+          &lt MEDIA Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O  &lt MEDIA P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             HRML(A,        S,         D,         F)   &lt NUMBER G     &lt NUMBER H  HRMR(J,     K,         L,            SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -251,15 +251,10 @@
 
         navigation_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
-         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp HOME  &kp LALT  &mo NAVIGATION_SECOND &kp N6     &kp END       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none    &none           &kp ESC  &kp ENTER
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            &none        &none     &none                   &none       &none            &none      &kp PG_DN  &kp PG_UP  &none      &none
+            &kp HOME     &kp LALT  &mo NAVIGATION_SECOND   &caps_word  &kp END          &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &bootloader  &none     &none                   &none       &none            &none      &none      &none      &none      &none
+                                                &none    &none                                     &kp ESC  &kp ENTER
             >;
         };
         navigation_second_layer {
@@ -281,7 +276,7 @@
         //                                      @        $            !    =               >      <                 ]       [                |         &                                                       
            &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
         //     _                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
-           &kp LS(FSLH)    &ht PIPE LS(N3)  &ht MINUS FSLH   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
+           &kp LS(FSLH)    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
            &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
                                               &trans    &trans                                  &trans    &trans
             >;
