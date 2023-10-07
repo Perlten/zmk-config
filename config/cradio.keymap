@@ -133,7 +133,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time >
+                = <&macro_tap_time 0>
                 , <&macro_tap &kp DOWN_ARROW>
                 , <&macro_tap &kp DOWN_ARROW>
                 , <&macro_tap &kp DOWN_ARROW>
@@ -288,7 +288,7 @@
         wtile_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &kp C_PAUSE
+            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &kp PAUSE_BREAK
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
           &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5  &htwcwin N1 N1  &htwcwin N2 N2   &htwcwin N3 N3  &htwcwin N4 N4   &htwcwin N5 N5
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
@@ -305,8 +305,8 @@
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
            &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │          │
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &none
+        //│          │          │          │          │PROFILE 1 │   │          │          │          │          │          │
+         &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &bt BT_SEL 1    &trans     &trans     &trans     &trans    &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
