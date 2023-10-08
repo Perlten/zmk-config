@@ -8,3 +8,4 @@
 #define _RPAR LS(N9) // )
 #define _SLASH AMPS // /
 #define _BSLH RA(NUBS) // \
+#define _PERCENT LS(N5) // %

@@ -292,8 +292,8 @@
             bindings = <
         //                                      @        $            !    =               >      <                 ]       [                |         &                                                       
            &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
-        //     _                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
-           &kp LS(FSLH)    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
+        //     %                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
+           &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
            &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
                                               &trans    &trans                                  &trans    &trans
             >;
