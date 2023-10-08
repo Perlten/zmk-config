@@ -230,6 +230,16 @@
             bindings = <&tenup>, <&kp PG_UP>;
             mods = <(MOD_LSFT)>;
         };
+        htga: hold_tab_gamer_alt {
+            label = "hold_tap_gamer_alt";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1>;
+            global-quick-tap;
+            retro-tap;
+            bindings = <&kp>, <&sl>;
+        };
     };
 
     conditional_layers {
@@ -343,7 +353,7 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp LCTRL   &kp Z     &kp X      &kp C      &kp V         &kp B        xxx         xxx        xxx       xxx
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE &mo GAMER_2     &kp LMETA &kp LALT
+                                             &kp SPACE &htga LALT GAMER_2     &kp LMETA &kp LALT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
