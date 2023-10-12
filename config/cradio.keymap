@@ -207,6 +207,16 @@
             global-quick-tap;
             bindings = <&wccwin>, <&wcwin>;
         };
+        tabsymtap: tabsymtap {
+            label = "tab_sym_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1>;
+            global-quick-tap;
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     conditional_layers {
@@ -219,7 +229,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+        default_layer { 
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
           &lt MEDIA Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O  &lt MEDIA P
@@ -228,20 +238,16 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &lt NAVIGATION SPACE &lt SYMBOL TAB  &kp BSPC   &htw 0 WTILE
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+                       &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB        &kp BSPC   &htw 0 WTILE
+        //           ╰─────────────────────┴─────────────────────╯     ╰──────────┴──────────╯
             >;
         };
 
         navigation_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
-         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp HOME  &kp LALT  &mo NAVIGATION_SECOND    &kp N6     &kp END       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+            &kp HOME &kp LALT &mo NAVIGATION_SECOND &kp N6 &kp END     &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &none    &none           &kp ESC  &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
@@ -267,7 +273,8 @@
         //     _                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
            &kp LS(FSLH)    &ht PIPE LS(N3)  &ht MINUS FSLH   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
            &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
-                                              &trans    &trans                                  &trans    &trans
+                                              &trans    &trans                                                    &trans    &trans
+        //                                 ╰──────────┴──────────╯                                              ╰──────────┴──────────╯
             >;
         };
 
@@ -287,15 +294,11 @@
 
         wtile_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5  &htwcwin N1 N1  &htwcwin N2 N2   &htwcwin N3 N3  &htwcwin N4 N4   &htwcwin N5 N5
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none         &htwcwin N6 N6  &htwcwin N7 N7   &htwcwin N8 N8  &htwcwin N9 N9   &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &wcw Q     &wcwin Q                &kp LSHFT  &kp LMETA
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+          &wtquit      &wtadd       &none         &none         &none                   &none &htwcwin N9 N9 &none          &wtremove      &none
+          &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5            &none &htwcwin N1 N1 &htwcwin N2 N2 &htwcwin N3 N3 &htwcwin N4 N4   
+          &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none                   &none &htwcwin N5 N5 &htwcwin N6 N6 &htwcwin N7 N7 &htwcwin N8 N8     
+                                             &wcw Q     &wcwin Q                        &kp LSHFT  &kp LMETA
+        //                                 ╰──────────┴──────────╯                     ╰──────────┴──────────╯
             >;
         };
 
