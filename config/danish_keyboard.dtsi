@@ -1,0 +1,11 @@
+#define _QMARK LS(MINUS) // ?
+#define _MINUS FSLH // -
+#define _UNDERSCORE LS(FSLH) // _
+#define _HASH LS(N3) // #
+#define _STAR PIPE // *
+#define _PLUS MINUS // +
+#define _LPAR LS(N8) // (
+#define _RPAR LS(N9) // )
+#define _SLASH AMPS // /
+#define _BSLH RA(NUBS) 
+#define _PERCENT LS(N5) // %

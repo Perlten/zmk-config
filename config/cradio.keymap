@@ -5,6 +5,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include "danish_keyboard.dtsi"
+
+#define ___ &trans
+#define xxx &none
+
 #define BASE 0
 #define NAVIGATION 1
 #define NAVIGATION_SECOND 2
@@ -13,8 +18,10 @@
 #define WTILE 5
 #define TRI 6
 #define GAMER 7
-#define MEDIA 8
-#define NUMBER 9
+#define GAMER_RIGHT 8
+#define GAMER_NUMBER 9
+#define MEDIA 10
+#define NUMBER 11
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -29,6 +36,9 @@
   │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
   ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
               ╰────────╯ ╰────────╯            */
+&caps_word {
+    continue-list = <_UNDERSCORE _MINUS BSPC>;
+};
 
 / {
     macros {
@@ -133,7 +143,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap_time >
+                = <&macro_tap_time 0>
                 , <&macro_tap &kp DOWN_ARROW>
                 , <&macro_tap &kp DOWN_ARROW>
                 , <&macro_tap &kp DOWN_ARROW>
@@ -216,6 +226,28 @@
             global-quick-tap;
             retro-tap;
             bindings = <&mo>, <&kp>;
+        tdpd: tendown_or_pagedown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TEN_DOWN_OR_PAGE_DOWN";
+            #binding-cells = <0>;
+            bindings = <&tendown>, <&kp PG_DN>;
+            mods = <(MOD_LSFT)>;
+        };
+        tupu: tenup_or_pageup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TEN_UP_OR_PAGE_UP";
+            #binding-cells = <0>;
+            bindings = <&tenup>, <&kp PG_UP>;
+            mods = <(MOD_LSFT)>;
+        };
+        htga: hold_tab_gamer_alt {
+            label = "hold_tap_gamer_alt";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&sl>;
         };
     };
 
@@ -234,9 +266,9 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
           &lt MEDIA Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O  &lt MEDIA P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            HRML(A,        S,         D,         F)   &lt NUMBER G     &lt NUMBER H  HRMR(J,     K,         L,        SEMI)
+            HRML(A,        S,         D,         F)   &lt NUMBER G     &lt NUMBER H  HRMR(J,     K,         L,            SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA &ht _QMARK DOT  &ht _UNDERSCORE _MINUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                        &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB        &kp BSPC   &htw 0 WTILE
         //           ╰─────────────────────┴─────────────────────╯     ╰──────────┴──────────╯
@@ -245,11 +277,18 @@
 
         navigation_layer {
             bindings = <
+<<<<<<< HEAD
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
             &kp HOME &kp LALT &mo NAVIGATION_SECOND &kp N6 &kp END     &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
                                               &none    &none           &kp ESC  &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+=======
+            &none        &none     &none                   &none       &none            &none      &kp PG_DN  &kp PG_UP  &none      &none
+            &kp HOME     &kp LALT  &mo NAVIGATION_SECOND   &caps_word  &kp END          &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &bootloader  &none     &none                   &none       &none            &none      &none      &none      &none      &none
+                                                &none    &none                                     &kp ESC  &kp ENTER
+>>>>>>> fa53b9058019f49ef2b016a23bcea494d02284de
             >;
         };
         navigation_second_layer {
@@ -257,11 +296,11 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
          //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp HOME  &kp LALT    &none    &kp N6     &kp END           &kp B     &tendown   &tenup   &kp E   &kp SEMI
+            &kp LSHFT  &kp LALT    &none    &kp N6     &kp END           &kp B     &tdpd      &tupu     &kp E   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none    &none           &kp ESC  &kp ENTER
+                                              &none    &none         &kp DELETE  &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -270,8 +309,8 @@
             bindings = <
         //                                      @        $            !    =               >      <                 ]       [                |         &                                                       
            &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
-        //     _                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
-           &kp LS(FSLH)    &ht PIPE LS(N3)  &ht MINUS FSLH   &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
+        //     %                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
+           &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
            &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
                                               &trans    &trans                                                    &trans    &trans
         //                                 ╰──────────┴──────────╯                                              ╰──────────┴──────────╯
@@ -294,11 +333,23 @@
 
         wtile_layer {
             bindings = <
+<<<<<<< HEAD
           &wtquit      &wtadd       &none         &none         &none                   &none &htwcwin N9 N9 &none          &wtremove      &none
           &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5            &none &htwcwin N1 N1 &htwcwin N2 N2 &htwcwin N3 N3 &htwcwin N4 N4   
           &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none                   &none &htwcwin N5 N5 &htwcwin N6 N6 &htwcwin N7 N7 &htwcwin N8 N8     
                                              &wcw Q     &wcwin Q                        &kp LSHFT  &kp LMETA
         //                                 ╰──────────┴──────────╯                     ╰──────────┴──────────╯
+=======
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &kp PAUSE_BREAK
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+          &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5  &htwcwin N1 N1  &htwcwin N2 N2   &htwcwin N3 N3  &htwcwin N4 N4   &htwcwin N5 N5
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+          &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none         &htwcwin N6 N6  &htwcwin N7 N7   &htwcwin N8 N8  &htwcwin N9 N9   &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &wcw Q     &wcwin Q        &kp LSHFT  &kp LMETA
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+>>>>>>> fa53b9058019f49ef2b016a23bcea494d02284de
             >;
         };
 
@@ -306,15 +357,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &tog GAMER
+           &sys_reset     ___        ___       ___    &bt BT_SEL 0        ___        ___       ___        ___    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │          │
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &none
+        //│          │          │          │          │PROFILE 1 │   │          │          │          │          │          │
+         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 ___  &bt BT_SEL 1        ___        ___        ___        ___       xxx
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+            ___          ___        ___    &bt BT_CLR &bt BT_SEL 2       ___        ___       ___         ___       ___
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                                ___       ___             ___       ___
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -322,13 +373,39 @@
         gamer_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &ht TAB ESC  &kp Q     &kp W         &kp E    &kp R          &kp T    &none     &none         &none    &tog GAMER
+           &ht TAB ESC  &kp Q     &kp W       &kp E     &kp R          &kp T       xxx         xxx         xxx    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A       &kp S     &kp D     &kp F         &none     &kp J      &kp K      &none     &none
+           &kp LSHFT    &kp A       &kp S     &kp D     &kp F         &kp G     &kp J      &kp K          xxx        xxx
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &kp Z     &kp X      &kp C      &kp V         &kp B     &none     &none     &none     &none
+            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   &kp V        xxx         xxx        xxx       xxx
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE   &kp LALT       &kp LMETA &kp LALT
+                                       &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &kp ENTER
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        gamer_layer_right {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+             &kp T     &kp Y        &kp U     &kp I      &kp O           xxx        xxx        xxx        xxx         xxx
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &kp G     &kp H        &kp J     &kp K      &kp L           xxx        xxx        xxx        xxx         xxx
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+             &kp V     &kp B        &kp N     &kp M      &kp P           xxx        xxx        xxx        xxx         xxx
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                            &kp ENTER    &kp BSPC             xxx        xxx
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        gamer_layer_number {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+           &kp N7       &kp N6      ___        &kp N4    &kp N1          ___         ___         ___       ___       ___      
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+           &kp N8        ___        ___        ___       &kp N2         ___         ___         ___         ___     ___
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+           &kp N9       &kp N0      ___        &kp N5    &kp N3         ___         ___         ___         ___     ___    
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             xxx         xxx              xxx       xxx
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -351,9 +428,9 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none     &none     &none     &none    &none                &none     &none        &none    &none         &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp N1      &kp N2     &kp N3    &kp N4      &kp N5         &kp N1     &kp N2     &kp N3       &kp N4    &kp N5
+           &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5      &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp N6     &kp N7     &kp N8      &kp N9     &kp N0         &kp N6     &kp N7     &kp N8       &kp N9    &kp N0
+           &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &kp N0         &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &kp N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LSHFT  &kp Q        &kp LALT  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
