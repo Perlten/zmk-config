@@ -226,7 +226,7 @@
             global-quick-tap;
             retro-tap;
             bindings = <&mo>, <&kp>;
-        }
+        };
         tdpd: tendown_or_pagedown {
             compatible = "zmk,behavior-mod-morph";
             label = "TEN_DOWN_OR_PAGE_DOWN";
