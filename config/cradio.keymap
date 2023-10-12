@@ -277,18 +277,10 @@
 
         navigation_layer {
             bindings = <
-<<<<<<< HEAD
-            &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
-            &kp HOME &kp LALT &mo NAVIGATION_SECOND &kp N6 &kp END     &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-           &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
-                                              &none    &none           &kp ESC  &kp ENTER
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-=======
             &none        &none     &none                   &none       &none            &none      &kp PG_DN  &kp PG_UP  &none      &none
             &kp HOME     &kp LALT  &mo NAVIGATION_SECOND   &caps_word  &kp END          &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
             &bootloader  &none     &none                   &none       &none            &none      &none      &none      &none      &none
                                                 &none    &none                                     &kp ESC  &kp ENTER
->>>>>>> fa53b9058019f49ef2b016a23bcea494d02284de
             >;
         };
         navigation_second_layer {
@@ -333,23 +325,11 @@
 
         wtile_layer {
             bindings = <
-<<<<<<< HEAD
-          &wtquit      &wtadd       &none         &none         &none                   &none &htwcwin N9 N9 &none          &wtremove      &none
+          &wtquit      &wtadd       &none         &none         &none                   &none &htwcwin N9 N9 &none          &wtremove      &kp PAUSE_BREAK
           &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5            &none &htwcwin N1 N1 &htwcwin N2 N2 &htwcwin N3 N3 &htwcwin N4 N4   
           &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none                   &none &htwcwin N5 N5 &htwcwin N6 N6 &htwcwin N7 N7 &htwcwin N8 N8     
                                              &wcw Q     &wcwin Q                        &kp LSHFT  &kp LMETA
         //                                 ╰──────────┴──────────╯                     ╰──────────┴──────────╯
-=======
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &wtquit     &wtadd     &none     &none    &none            &none     &none        &none     &wtremove  &kp PAUSE_BREAK
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5  &htwcwin N1 N1  &htwcwin N2 N2   &htwcwin N3 N3  &htwcwin N4 N4   &htwcwin N5 N5
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-          &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none         &htwcwin N6 N6  &htwcwin N7 N7   &htwcwin N8 N8  &htwcwin N9 N9   &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &wcw Q     &wcwin Q        &kp LSHFT  &kp LMETA
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
->>>>>>> fa53b9058019f49ef2b016a23bcea494d02284de
             >;
         };
 
