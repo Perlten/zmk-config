@@ -409,6 +409,7 @@
             &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
                        &lt SPACE            &tabsymtap SYMBOL TAB            &kp BSPC  &tog GAMER_ALPHA
         //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
+            >;
         };
     
         media_layer {
