@@ -20,8 +20,9 @@
 #define GAMER 7
 #define GAMER_RIGHT 8
 #define GAMER_NUMBER 9
-#define MEDIA 10
-#define NUMBER 11
+#define GAMER_ALPHA 10
+#define MEDIA 11
+#define NUMBER 12
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -408,7 +409,7 @@
             &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
                        &lt SPACE            &tabsymtap SYMBOL TAB            &kp BSPC  &tog GAMER_ALPHA
         //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
-        }
+        };
     
         media_layer {
             bindings = <
