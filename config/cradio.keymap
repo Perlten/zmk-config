@@ -365,13 +365,13 @@
         gamer_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &ht TAB ESC  &kp Q     &kp W       &kp E     &kp R          &kp T       xxx         xxx         xxx    &tog GAMER
+           &ht TAB ESC  &kp Q     &kp W       &kp E     &kp R            xxx       xxx         xxx         xxx    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A       &kp S     &kp D     &kp F         &kp G     &kp J      &kp K          xxx        xxx
+           &kp LSHFT    &kp A       &kp S     &kp D     &kp F            xxx        xxx         xxx      xxx        xxx
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   &kp V        xxx         xxx        xxx       xxx
+            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   xxx        xxx         xxx        xxx       xxx
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &kp ENTER
+                                       &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &tog GAMER_ALPHA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -401,6 +401,14 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
+        gamer_layer_alpha {
+        bindings = <
+            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                   &kp G    &kp U      &kp D    &lt MEDIA J
+            &kp S,        &kp H,     &kp N,     &kp T      &ht _QMARK DOT    &lt NUMBER COMMA        &kp A,   &kp E,     &kp O,   &kp I
+            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
+                       &lt SPACE            &tabsymtap SYMBOL TAB            &kp BSPC  &tog GAMER_ALPHA
+        //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
+        }
     
         media_layer {
             bindings = <
