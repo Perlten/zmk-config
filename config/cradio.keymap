@@ -265,15 +265,11 @@
         // HALMAK 
         default_layer { 
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-          &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z          &kp DOT   &kp G      &kp U      &kp D    &lt MEDIA J
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            HRML(S,        H,         N,         T)   &lt NUMBER DOT &lt NUMBER COMMA HRMR(A,     E,         O,      I)
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp F      &kp M      &kp V      &kp C      &kp DOT          &kp Q      &kp P    &kp X      &kp K       &kp Y
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                       &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB        &kp BSPC   &htw 0 WTILE
-        //           ╰─────────────────────┴─────────────────────╯     ╰──────────┴──────────╯
+            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &ht _UNDERSCORE _MINUS     &kp G    &kp U      &kp D    &lt MEDIA J
+            HRML(S,        H,         N,         T)        &ht _QMARK DOT    &lt NUMBER COMMA        HRMR(A,      E,         O,         I)
+            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &kp Q                      &kp P    &kp X      &kp K    &kp Y
+                       &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB            &kp BSPC   &htw 0 WTILE
+        //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
             >;
         };
         // // QWERTY 
