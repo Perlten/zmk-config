@@ -301,7 +301,7 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
             &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
          //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LSHFT  &kp LALT    &none    &kp N6     &kp END           &kp B     &tdpd      &tupu     &kp E   &kp SEMI
+            &kp HOME    &kp LALT    &none    &kp N6     &kp END           &kp B     &tdpd      &tupu     &kp E   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
@@ -403,15 +403,13 @@
             >;
         };
         gamer_layer_alpha {
-        bindings = <
+            bindings = <
             &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                   &kp G    &kp U      &kp D    &lt MEDIA J
             &kp S         &kp H      &kp N      &kp T      &ht _QMARK DOT    &lt NUMBER COMMA        &kp A    &kp E      &kp O    &kp I
-            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &ht _UNDERSCORE _MINUS   &kp P   &kp X      &kp K    &kp Y
+            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &ht _UNDERSCORE _MINUS  &kp P    &kp X      &kp K    &kp Y
                        &lt SPACE            &tabsymtap SYMBOL TAB            &kp BSPC  &tog GAMER_ALPHA
-        //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
             >;
         };
-    
         media_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -428,11 +426,11 @@
         number_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &none     &none     &none     &none    &none                &none     &none        &none    &none         &none
+            &none     &none     &none     &none    &none              &kp F11     &kp F12    &none    &none         &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5      &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &kp N0         &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &kp N0
+           &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &kp N0         &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &ht F10 N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp SPACE  &kp Q        &kp BSPC  &kp LMETA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
