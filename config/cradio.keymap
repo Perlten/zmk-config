@@ -283,7 +283,7 @@
         // HALMAK 
         default_layer { 
             bindings = <
-            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                    &kp D    &kp U      &kp G    &lt MEDIA J
+            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                    &kp U    &kp D      &kp G    &lt MEDIA J
             HRML(S,        H,         N,         T)        &ht _QMARK DOT    &lt NUMBER COMMA        HRMR(A,      E,         O,         I)
             &kp F         &kp M      &kp V      &kp C      &sctd             &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
                        &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB            &kp BSPC   &htw 0 WTILE
