@@ -368,9 +368,9 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
            &ht TAB ESC  &kp Q     &kp W       &kp E     &kp R            xxx       xxx         xxx         xxx    &tog GAMER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A       &kp S     &kp D     &kp F         &kp ENTER   &kp LARW   &kp DARW   &kp UARW   &kp RARW
+           &kp LSHFT    &kp A       &kp S     &kp D     &kp F            &kp LARW   &kp DARW   &kp UARW   &kp RARW   xxx
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   xxx        xxx         xxx        xxx       xxx
+            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   xxx     &kp ENTER     xxx        xxx       xxx
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                        &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &tog GAMER_ALPHA
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
