@@ -314,7 +314,7 @@
             bindings = <
            &trans          &none            &ht _AT _DOLLAR      &ht _EXCL _EQUAL &ht _GT  _LT         &ht _RBKT _LBKT        &ht _PIPE  _AMPS                        &none                         &none   &none
            &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH     &ht LS(DOT) LS(COMMA)  &ht _SINGLE_QUOTES _DOUBLE_QUOTES       &ht _RIGHT_BRACE _LEFT_BRACE  &none   &none
-           &trans          &trans           &trans               &trans            &trans              &none                  &kp _Å                                  &kp _Ø                        &kp _Æ  &trans
+           &trans          &trans           &trans               &trans            &trans              &none                  &kp _AA                                 &kp _OE                       &kp _AE &trans
                                                             &trans    &trans                                  &trans    &trans
             >;
         };

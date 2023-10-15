@@ -23,6 +23,6 @@
 #define _RBKT RA(N9) // ]
 #define _AMPS CARET // &
 #define _PIPE RA(EQUAL) // |
-#define _Æ SEMI // æ
-#define _Ø APOS // ø
-#define _Å LBKT // å
+#define _AE SEMI // æ
+#define _OE APOS // ø
+#define _AA LBKT // å
