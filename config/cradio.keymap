@@ -312,13 +312,10 @@
 
         symbol_layer {
             bindings = <
-        //                                      @        $            !    =               >      <                 ]       [                |         &                                                       
-           &trans          &none            &ht RA(N2) RA(N4)    &ht EXCL RPAR      &ht LS(NUBS) NUBS           &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET   &none              &none   &none
-        //     %                *     #           +     -          )       (           \      /                   :       ;              '     "              }        {                            
-           &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH           &ht LS(DOT) LS(COMMA)  &ht BSLH LS(N2)       &ht RA(N0) RA(N7)  &none   &none
-           &trans          &trans           &trans               &trans             &trans                      &none                  &none                 &none              &none   &trans
-                                              &trans    &trans                                                    &trans    &trans
-        //                                 ╰──────────┴──────────╯                                              ╰──────────┴──────────╯
+           &trans          &none            &ht _AT _DOLLAR      &ht _EXCL _EQUAL &ht _GT  _LT         &ht _RBKT _LBKT        &ht _PIPE  _AMPS                        &none                         &none   &none
+           &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH     &ht LS(DOT) LS(COMMA)  &ht _SINGLE_QUOTES _DOUBLE_QUOTES       &ht _RIGHT_BRACE _LEFT_BRACE  &none   &none
+           &trans          &trans           &trans               &trans            &trans              &none                  &kp _Å                                  &kp _Ø                        &kp _Æ  &trans
+                                                            &trans    &trans                                  &trans    &trans
             >;
         };
 
@@ -404,10 +401,10 @@
         };
         gamer_layer_alpha {
             bindings = <
-            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                   &kp G    &kp U      &kp D    &lt MEDIA J
-            &kp S         &kp H      &kp N      &kp T      &ht _QMARK DOT    &lt NUMBER COMMA        &kp A    &kp E      &kp O    &kp I
-            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT        &ht _UNDERSCORE _MINUS  &kp P    &kp X      &kp K    &kp Y
-                       &kp SPACE  &tabsymtap SYMBOL TAB            &kp BSPC  &tog GAMER_ALPHA
+            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z                   &kp Q                   &kp G    &kp U      &kp D    &lt MEDIA J
+            &kp S         &kp H      &kp N      &kp T      &ht _QMARK DOT          &lt NUMBER COMMA        &kp A    &kp E      &kp O    &kp I
+            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT              &ht _UNDERSCORE _MINUS  &kp P    &kp X      &kp K    &kp Y
+                       &kp SPACE  &tabsymtap SYMBOL TAB                            &kp BSPC   &tog GAMER_ALPHA
             >;
         };
         media_layer {

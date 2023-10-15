@@ -9,3 +9,20 @@
 #define _SLASH AMPS // /
 #define _BSLH RA(NUBS) 
 #define _PERCENT LS(N5) // %
+#define _DOUBLE_QUOTES LS(N2) // "
+#define _SINGLE_QUOTES BSLH // '
+#define _LEFT_BRACE RA(N7) // {
+#define _RIGHT_BRACE RA(N0) // }
+#define _AT RA(N2) // @
+#define _DOLLAR RA(N4) // $
+#define _EQUAL RPAR // =
+#define _EXCL EXCL // !
+#define _LT NUBS // <
+#define _GT LS(NUBS) // >
+#define _LBKT RA(N8) // [
+#define _RBKT RA(N9) // ]
+#define _AMPS CARET // &
+#define _PIPE RA(EQUAL) // |
+#define _Æ SEMI // æ
+#define _Ø APOS // ø
+#define _Å LBKT // å
