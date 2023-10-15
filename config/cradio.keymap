@@ -268,6 +268,16 @@
             tapping-term-ms = <150>;
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
+        togkp: togkp {
+            label = "hold_tap_change_window";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&tog>;
+        };
     };
 
     conditional_layers {
@@ -421,7 +431,7 @@
             &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z                   &kp Q                   &kp U    &kp D      &kp G    &lt MEDIA J
             &kp S         &kp H      &kp N      &kp T      &ht _QMARK DOT          &lt NUMBER COMMA        &kp A    &kp E      &kp O    &kp I
             &kp F         &kp M      &kp V      &kp C      &sk LSHIFT              &ht _UNDERSCORE _MINUS  &kp P    &kp X      &kp K    &kp Y
-                       &kp SPACE  &tabsymtap SYMBOL TAB                            &kp BSPC   &tog GAMER_ALPHA
+                       &kp SPACE  &tabsymtap SYMBOL TAB                            &kp BSPC   &togkp ENTER GAMER_ALPHA
             >;
         };
         media_layer {
@@ -440,7 +450,7 @@
         number_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &none     &none     &none     &none    &none              &kp F11     &kp F12    &none    &none         &none
+            &none     &none     &none          &kp F11   &kp F12      &kp F11     &kp F12    &none    &none         &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5      &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
