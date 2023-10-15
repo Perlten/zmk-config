@@ -175,6 +175,16 @@
                 , <&macro_tap &kp UP_ARROW>
                 ;
         };
+        wae: wae {
+            label = "WTILE_AE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LMETA>
+                , <&macro_tap &kp _AE>
+                , <&macro_release &kp LMETA>
+                ;
+        };
     };
 
     behaviors {
@@ -314,7 +324,7 @@
             bindings = <
            &trans          &none            &ht _AT _DOLLAR      &ht _EXCL _EQUAL &ht _GT  _LT         &ht _RBKT _LBKT        &ht _PIPE  _AMPS                        &none                         &none   &none
            &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH     &ht LS(DOT) LS(COMMA)  &ht _SINGLE_QUOTES _DOUBLE_QUOTES       &ht _RIGHT_BRACE _LEFT_BRACE  &none   &none
-           &trans          &trans           &trans               &trans            &trans              &none                  &kp _AA                                 &kp _OE                       &kp _AE &trans
+           &trans          &trans           &trans               &trans            &trans              &none                  &kp _AA                                 &kp _OE                       &wae    &trans
                                                             &trans    &trans                                  &trans    &trans
             >;
         };
