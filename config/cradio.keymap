@@ -269,14 +269,14 @@
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
         togkp: togkp {
-            label = "hold_tap_change_window";
+            label = "HT_TAP_TOGGLE_LAYER";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&kp>, <&tog>;
+            bindings = <&tog>, <&kp>;
         };
     };
 
@@ -394,9 +394,9 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
            &kp LSHFT    &kp A       &kp S     &kp D     &kp F            &kp LARW   &kp DARW   &kp UARW   &kp RARW   xxx
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   xxx     &kp ENTER     xxx        xxx       xxx
+            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   xxx        xxx        xxx        xxx       xxx
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &tog GAMER_ALPHA
+                                       &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &togkp GAMER_ALPHA ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -416,11 +416,11 @@
         gamer_layer_number {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &kp N7       &kp N6      ___        &kp N4    &kp N1          ___         ___         ___       ___       ___      
+           &kp N8       &kp N0      ___        &kp N5    &kp N3          ___         ___         ___       ___       ___      
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp N8        ___        ___        ___       &kp N2         ___         ___         ___         ___     ___
+           &kp N7        ___        ___        ___       &kp N2         ___         ___         ___         ___     ___
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp N9       &kp N0      ___        &kp N5    &kp N3         ___         ___         ___         ___     ___    
+           &kp N6       &kp N9      ___        &kp N4    &kp N1         ___         ___         ___         ___     ___    
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              xxx         xxx              xxx       xxx
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -431,7 +431,7 @@
             &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z                   &kp Q                   &kp U    &kp D      &kp G    &lt MEDIA J
             &kp S         &kp H      &kp N      &kp T      &ht _QMARK DOT          &lt NUMBER COMMA        &kp A    &kp E      &kp O    &kp I
             &kp F         &kp M      &kp V      &kp C      &sk LSHIFT              &ht _UNDERSCORE _MINUS  &kp P    &kp X      &kp K    &kp Y
-                       &kp SPACE  &tabsymtap SYMBOL TAB                            &kp BSPC   &togkp ENTER GAMER_ALPHA
+                       &kp SPACE  &tabsymtap SYMBOL TAB                            &kp BSPC   &togkp GAMER_ALPHA ENTER
             >;
         };
         media_layer {
