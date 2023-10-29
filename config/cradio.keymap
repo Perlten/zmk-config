@@ -265,7 +265,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS_WORD_TAP_DANCE";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
         togkp: togkp {
