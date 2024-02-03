@@ -475,7 +475,7 @@
 
     #define COMBO(NAME, BINDINGS, KEYPOS) \
     combo_##NAME { \
-        timeout-ms = <50>; \
+        timeout-ms = <30>; \
         bindings = <BINDINGS>; \
         key-positions = <KEYPOS>; \
         layers = <0>; \
@@ -484,14 +484,14 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(w, &kp W, 20, 29)
-        COMBO(l, &kp L, 21, 28)
-        COMBO(r, &kp R, 22, 27)
-        COMBO(b, &kp B, 23, 26)
+        COMBO(w, &kp W, 20 29)
+        COMBO(l, &kp L, 21 28)
+        COMBO(r, &kp R, 22 27)
+        COMBO(b, &kp B, 23 26)
 
-        COMBO(u, &kp U, 13, 16)
+        COMBO(u, &kp U, 13 16)
         COMBO(d, &kp D, 12 17)
         COMBO(g, &kp G, 11 18)
-        COMBO(j, &kp J, 10, 19)
+        COMBO(j, &kp J, 10 19)
     };
 };
