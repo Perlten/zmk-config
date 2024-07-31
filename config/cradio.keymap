@@ -294,7 +294,7 @@
         default_layer { 
             bindings = <
             &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                    &kp U    &kp D      &kp G    &lt MEDIA J
-            &ht LSHFT &kp S &ht LALT &kp H &ht LCTRL &kp N &ht RGUI &kp T    &ht _QMARK DOT    &lt NUMBER COMMA &ht RGUI &kp A &ht LCTRL &kp E &ht LALT &kp O &ht LSHFT &kp I
+            &ht LSHFT S &ht LALT H &ht LCTRL N &ht RGUI T    &ht _QMARK DOT    &lt NUMBER COMMA &ht RGUI  A &ht LCTRL  E &ht LALT  O &ht LSHFT  I
             &kp F         &kp M      &kp V      &kp C      &sctd             &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
                        &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB            &kp BSPC   &htw 0 WTILE
         //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
