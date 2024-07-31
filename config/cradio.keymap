@@ -315,7 +315,7 @@
             bindings = <&kp>, <&sl>;
         };
 
-        sctd: sctd {
+        sctd: SHIFT_CAPS_WORD_TAP_DANCE {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS_WORD_TAP_DANCE";
             #binding-cells = <0>;
@@ -323,7 +323,7 @@
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
 
-        togkp: togkp {
+        togkp: HT_TAP_TOGGLE_LAYER {
             label = "HT_TAP_TOGGLE_LAYER";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -380,19 +380,19 @@
 
         number_layer {
             bindings = <
-&none      &none      &none      &kp F11    &kp F12      &kp F11    &kp F12    &none      &none      &none
-&ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5    &ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5
-&ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &kp N0       &ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &ht F10 N0
-                                 &kp SPACE  &kp Q        &kp BSPC   &kp LMETA
+&none      &none      &none      &kp F11    &kp F12       &kp F11    &kp F12    &none      &none      &none
+&ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5     &ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5
+&ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &ht N0 F10    &ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &ht F10 N0
+                                 &kp SPACE  &none         &kp BSPC   &none
             >;
         };
 
         symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+                     &none  &none    &none  &none
             >;
         };
     };
