@@ -305,8 +305,8 @@
             mods = <(MOD_LSFT)>;
         };
 
-        htga: hold_tab_gamer_alt {
-            label = "hold_tap_gamer_alt";
+        kp_sl: kp_sl {
+            label = "kp_sl";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -343,6 +343,12 @@
         bootloader {
             bindings = <&bootloader>;
             key-positions = <10 11 12 13 14>;
+        };
+
+        toggle_gamer {
+            bindings = <&to 6>;
+            key-positions = <16 17 18 19>;
+            layers = <0 6>;
         };
     };
 
@@ -402,6 +408,24 @@
 &none  &kp HOME  &kp LCTRL  &kp END  &none    &none    &kp LEFT   &kp UP    &kp RIGHT  &none
 &none  &none     &kp PG_DN  &none    &none    &none    &none      &kp LEFT  &none      &none
                             &none    &none    &kp ESC  &kp ENTER
+            >;
+        };
+
+        gamer {
+            bindings = <
+&ht TAB ESCAPE  &kp Q  &kp W  &kp E      &kp R            &kp N1    &kp N2    &kp N3  &kp N4     &kp N5
+&kp LSHFT       &kp A  &kp S  &kp D      &kp F            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+&kp LCTRL       &kp Z  &kp X  &kp C      &kp V            &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+                              &kp SPACE  &kp_sl LALT 7    &none     &none
+            >;
+        };
+
+        gamer_right {
+            bindings = <
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+                     &none  &none    &none  &none
             >;
         };
     };
