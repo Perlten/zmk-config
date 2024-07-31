@@ -422,10 +422,10 @@
 
         gamer_right {
             bindings = <
-&kp T  &kp Y  &kp U  &kp I  &kp O    &none  &none  &none  &none  &none
-&kp G  &kp H  &kp J  &kp K  &kp L    &none  &none  &none  &none  &none
-&kp B  &kp N  &kp M  &kp P  &none    &none  &none  &none  &none  &none
-                     &none  &none    &none  &none
+&kp T     &kp Y     &kp U     &kp I     &kp O       &none  &none  &none  &none  &none
+&ht N1 G  &ht N2 H  &ht N3 J  &ht N4 K  &ht N5 L    &none  &none  &none  &none  &none
+&ht N6 B  &ht N7 N  &ht N8 M  &ht N9 P  &kp N0      &none  &none  &none  &none  &none
+                              &none     &none       &none  &none
             >;
         };
     };
