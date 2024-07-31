@@ -343,6 +343,7 @@
         bootloader {
             bindings = <&bootloader>;
             key-positions = <10 11 12 13 14>;
+            layers = <0>;
         };
 
         toggle_gamer {
