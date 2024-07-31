@@ -342,7 +342,7 @@
 
         bootloader {
             bindings = <&bootloader>;
-            key-positions = <10 11 12 13>;
+            key-positions = <23 22 21 20>;
             layers = <0>;
         };
 
