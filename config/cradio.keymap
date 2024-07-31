@@ -1,15 +1,12 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
+#include "danish_keyboard.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-
-#include "danish_keyboard.dtsi"
 
 #define ___ &trans
 #define xxx &none
-
 #define BASE 0
 #define NAVIGATION 1
 #define NAVIGATION_SECOND 2
@@ -26,7 +23,6 @@
 #define ALT_TEXT 13
 
 // Home row mods macro
-
 /*                KEY POSITIONS
 
   ╭────────────────────╮ ╭────────────────────╮
@@ -36,10 +32,7 @@
   ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
               ╰────────╯ ╰────────╯            */
 
-
-&caps_word {
-    continue-list = <_UNDERSCORE _MINUS BSPC>;
-};
+&caps_word { continue-list = <_UNDERSCORE _MINUS BSPC>; };
 
 / {
     macros {
@@ -49,141 +42,192 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <2>;
-            bindings
-                = <&macro_press &mo MOUSE>
-                , <&macro_press &kp SEMI>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp SEMI>
-                , <&macro_release &mo MOUSE>
-                ;
+            bindings =
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_press>,
+                <&kp SEMI>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp SEMI>,
+                <&macro_release>,
+                <&mo 1>;
         };
+
         wtquit: wtquit {
             label = "WTILE_QUIT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LMETA>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Q>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LMETA>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LMETA>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp Q>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_release>,
+                <&kp LMETA>;
         };
+
         wtadd: wtadd {
             label = "WTILE_ADD";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LMETA>
-                , <&macro_tap &kp W>
-                , <&macro_release &kp LMETA>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LMETA>,
+                <&macro_tap>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp LMETA>;
         };
+
         wtremove: wtremove {
             label = "WTILE_REMOVE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LMETA>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp W>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LMETA>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LMETA>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp W>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_release>,
+                <&kp LMETA>;
         };
+
         wcw: wcw {
             label = "WTILE_CHANGE_WORKSPACE";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LMETA>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LMETA>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LMETA &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LMETA>;
         };
+
         wccw: wccw {
             label = "WTILE_CHANGE_WORKSPACE_INDEX";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LMETA>
-                , <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LMETA>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LMETA>,
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_release>,
+                <&kp LMETA>;
         };
+
         wcwin: wcwin {
             label = "WTILE_CHANGE_WINDOW";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         wccwin: wccwin {
             label = "WTILE_CHANGE_WINDOW_INDEX";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LSHFT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LALT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         tendown: tendown {
             label = "TEN_DOWN";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 0>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                , <&macro_tap &kp DOWN_ARROW>
-                ;
+            bindings =
+                <&macro_tap_time 0>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>;
         };
+
         tenup: tenup {
             label = "TEN_UP";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 0>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                , <&macro_tap &kp UP_ARROW>
-                ;
+            bindings =
+                <&macro_tap_time 0>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_tap>,
+                <&kp UP_ARROW>;
         };
+
         wae: wae {
             label = "WTILE_AE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LMETA>
-                , <&macro_tap &kp _AE>
-                , <&macro_release &kp LMETA>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LMETA>,
+                <&macro_tap>,
+                <&kp _AE>,
+                <&macro_release>,
+                <&kp LMETA>;
         };
     };
 
@@ -198,6 +242,7 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
         htw: hold_tab_wtile {
             label = "hold_tap_wtile";
             compatible = "zmk,behavior-hold-tap";
@@ -208,6 +253,7 @@
             retro-tap;
             bindings = <&lm>, <&sl>;
         };
+
         htwcw: htwcw {
             label = "hold_tap_change_workspace";
             compatible = "zmk,behavior-hold-tap";
@@ -218,6 +264,7 @@
             global-quick-tap;
             bindings = <&wccw>, <&wcw>;
         };
+
         htwcwin: htwcwin {
             label = "hold_tap_change_window";
             compatible = "zmk,behavior-hold-tap";
@@ -228,6 +275,7 @@
             global-quick-tap;
             bindings = <&wccwin>, <&wcwin>;
         };
+
         tabsymtap: tabsymtap {
             label = "tab_sym_tap";
             compatible = "zmk,behavior-hold-tap";
@@ -238,20 +286,25 @@
             retro-tap;
             bindings = <&mo>, <&kp>;
         };
+
         tdpd: tendown_or_pagedown {
             compatible = "zmk,behavior-mod-morph";
             label = "TEN_DOWN_OR_PAGE_DOWN";
             #binding-cells = <0>;
             bindings = <&tendown>, <&kp PG_DN>;
+
             mods = <(MOD_LSFT)>;
         };
+
         tupu: tenup_or_pageup {
             compatible = "zmk,behavior-mod-morph";
             label = "TEN_UP_OR_PAGE_UP";
             #binding-cells = <0>;
             bindings = <&tenup>, <&kp PG_UP>;
+
             mods = <(MOD_LSFT)>;
         };
+
         htga: hold_tab_gamer_alt {
             label = "hold_tap_gamer_alt";
             compatible = "zmk,behavior-hold-tap";
@@ -261,6 +314,7 @@
             global-quick-tap;
             bindings = <&kp>, <&sl>;
         };
+
         sctd: sctd {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS_WORD_TAP_DANCE";
@@ -268,6 +322,7 @@
             tapping-term-ms = <250>;
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
+
         togkp: togkp {
             label = "HT_TAP_TOGGLE_LAYER";
             compatible = "zmk,behavior-hold-tap";
@@ -280,187 +335,65 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <NAVIGATION SYMBOL>;
-            then-layer = <TRI>;
+    conditional_layers { compatible = "zmk,conditional-layers"; };
+
+    combos {
+        compatible = "zmk,combos";
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <10 11 12 13 14>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
         // HALMAK 
-        default_layer { 
-            bindings = <
-            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                    &kp U    &kp D      &kp G    &lt MEDIA J
-            &ht LSHFT S &ht LALT H &ht LCTRL N &ht RGUI T    &ht _QMARK DOT    &lt NUMBER COMMA &ht RGUI  A &ht LCTRL  E &ht LALT  O &ht LSHFT  I
-            &kp F         &kp M      &kp V      &kp C      &sctd             &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
-                       &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB            &kp BSPC   &htw 0 WTILE
-        //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
-            >;
-        };
 
-        navigation_layer {
+        default_layer {
             bindings = <
-            &none        &none     &none                   &none       &none            &none      &kp PG_DN  &kp PG_UP  &none      &none
-            &kp HOME     &kp LALT  &mo NAVIGATION_SECOND   &caps_word  &kp END          &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-            &bootloader  &none     &none                   &none       &none            &none      &none      &none      &none      &none
-                                                &none    &none                                     &kp ESC  &kp ENTER
-            >;
-        };
-        navigation_second_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &none        &none     &none     &none       &none         &none      &kp PG_DN   &kp PG_UP   &none       &none
-         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LSHIFT   &kp LALT    &none    &kp N6     &kp END           &kp B     &tdpd      &tupu     &kp E   &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &bootloader  &none     &none     &none        &none         &none     &none     &none     &none    &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &none    &none         &kp DELETE  &kp ENTER
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        symbol_layer {
-            bindings = <
-           &trans          &none            &ht _AT _DOLLAR      &ht _EXCL _EQUAL &ht _GT  _LT         &ht _RBKT _LBKT        &ht _PIPE  _AMPS                        &none                         &none   &none
-           &kp _PERCENT    &ht _STAR _HASH  &ht _PLUS _MINUS     &ht _RPAR _LPAR  &ht _BSLH _SLASH     &ht LS(DOT) LS(COMMA)  &ht _SINGLE_QUOTES _DOUBLE_QUOTES       &ht _RIGHT_BRACE _LEFT_BRACE  &none   &none
-           &trans          &trans           &trans               &trans            &trans              &none                  &kp _AA                                 &kp _OE                       &wae    &trans
-                                                            &trans    &trans                                  &trans    &trans
+&kp W  &kp L  &kp R  &kp B      &kp Z        &kp Q                 &kp U     &kp D  &kp G  &kp J
+&kp S  &kp H  &kp N  &kp T      &kp DOT      &lt 3 COMMA           &kp A     &kp E  &kp O  &kp I
+&kp F  &kp M  &kp V  &kp C      &sctd        &ht UNDERSCORE MINUS  &kp P     &kp X  &kp K  &kp Y
+                     &kp SPACE  &lt 4 TAB    &kp BSPC              &htw 0 2
             >;
         };
 
         mouse_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &none       &none     &kp W     &none          &none        &none     &none     &none         &none       &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A       &kp S     &kp D     &none         &none     &kp J      &kp K      &none     &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &none     &none    &none      &none         &none     &none     &none     &none     &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE   &kp LALT       &none     &none
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&none      &none  &kp W  &none      &none       &none  &none  &none  &none  &none
+&kp LSHFT  &kp A  &kp S  &kp D      &none       &none  &kp J  &kp K  &none  &none
+&kp LCTRL  &none  &none  &none      &none       &none  &none  &none  &none  &none
+                         &kp SPACE  &kp LALT    &none  &none
             >;
         };
 
         wtile_layer {
             bindings = <
-          &wtquit      &wtadd       &none         &none         &none                   &none &htwcwin N9 N9 &none          &wtremove      &kp PAUSE_BREAK
-          &htwcw N1 N1 &htwcw N2 N2 &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5            &none &htwcwin N1 N1 &htwcwin N2 N2 &htwcwin N3 N3 &htwcwin N4 N4   
-          &htwcw N6 N6 &htwcw N7 N7 &htwcw N8 N8  &htwcw N9 N9  &none                   &none &htwcwin N5 N5 &htwcwin N6 N6 &htwcwin N7 N7 &htwcwin N8 N8     
-                                             &wcw Q     &wcwin Q                        &kp LSHFT  &kp LMETA
-        //                                 ╰──────────┴──────────╯                     ╰──────────┴──────────╯
+&wtquit       &wtadd        &none         &none         &none           &none      &htwcwin N9 N9  &none           &wtremove       &kp PAUSE_BREAK
+&htwcw N1 N1  &htwcw N2 N2  &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5    &none      &htwcwin N1 N1  &htwcwin N2 N2  &htwcwin N3 N3  &htwcwin N4 N4
+&htwcw N6 N6  &htwcw N7 N7  &htwcw N8 N8  &htwcw N9 N9  &none           &none      &htwcwin N5 N5  &htwcwin N6 N6  &htwcwin N7 N7  &htwcwin N8 N8
+                                          &wcw Q        &wcwin Q        &kp LSHFT  &kp LMETA
             >;
         };
 
-        tri_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │          │
-           &sys_reset     ___        ___       ___    &bt BT_SEL 0        ___        ___       ___   &tog ALT_TEXT &tog GAMER
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │PROFILE 1 │   │          │          │          │          │          │
-         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 ___  &bt BT_SEL 1        ___        ___        ___        ___       xxx
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            ___          ___        ___    &bt BT_CLR &bt BT_SEL 2       ___        ___       ___         ___       ___
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                ___       ___             ___       ___
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        gamer_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &ht TAB ESC  &kp Q     &kp W       &kp E     &kp R            xxx       xxx         xxx         xxx    &tog GAMER
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp LSHFT    &kp A       &kp S     &kp D     &kp F            &kp LARW   &kp DARW   &kp UARW   &kp RARW   xxx
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp LCTRL   &kp Z     &kp X      &kp C    &sl GAMER_NUMBER   xxx        xxx        xxx        xxx       xxx
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                       &kp SPACE &htga LALT GAMER_RIGHT &kp BSPC &togkp GAMER_ALPHA ENTER
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-        gamer_layer_right {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-             &kp T     &kp Y        &kp U     &kp I      &kp O           xxx        xxx        xxx        xxx         xxx
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-             &kp G     &kp H        &kp J     &kp K      &kp L           xxx        xxx        xxx        xxx         xxx
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-             &kp V     &kp B        &kp N     &kp M      &kp P           xxx        xxx        xxx        xxx         xxx
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp ENTER    &kp BSPC             xxx        xxx
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-        gamer_layer_number {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &kp N8       &kp N0      ___        &kp N5    &kp N3          ___         ___         ___       ___       ___      
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp N7        ___        ___        ___       &kp N2         ___         ___         ___         ___     ___
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &kp N6       &kp N9      ___        &kp N4    &kp N1         ___         ___         ___         ___     ___    
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             xxx         xxx              xxx       xxx
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-        gamer_layer_alpha {
-            bindings = <
-            &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z                   &kp Q                   &kp U    &kp D      &kp G    &lt MEDIA J
-            &kp S         &kp H      &kp N      &kp T      &ht _QMARK DOT          &lt NUMBER COMMA        &kp A    &kp E      &kp O    &kp I
-            &kp F         &kp M      &kp V      &kp C      &sk LSHIFT              &ht _UNDERSCORE _MINUS  &kp P    &kp X      &kp K    &kp Y
-                       &kp SPACE  &tabsymtap SYMBOL TAB                            &kp BSPC   &togkp GAMER_ALPHA ENTER
-            >;
-        };
-        media_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-           &none        &none     &none         &none    &none          &none    &none     &none         &none    &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &none        &none      &none  &kp C_VOL_DN &kp C_VOL_UP    &none      &kp C_PREV &kp C_NEXT  &kp C_PP    &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &none      &none     &none        &none      &none            &none  &kp C_MUTE     &none     &none     &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none   &none              &none     &none
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
         number_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &none     &none     &none          &kp F11   &kp F12      &kp F11     &kp F12    &none    &none         &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5      &ht F1 N1   &ht F2 N2  &ht F3 N3 &ht F4 N4  &ht F5 N5 
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-           &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &kp N0         &ht F6 N6   &ht F7 N7  &ht F8 N8 &ht F9 N9  &ht F10 N0
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE  &kp Q        &kp BSPC  &kp LMETA
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&none      &none      &none      &kp F11    &kp F12      &kp F11    &kp F12    &none      &none      &none
+&ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5    &ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5
+&ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &kp N0       &ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &ht F10 N0
+                                 &kp SPACE  &kp Q        &kp BSPC   &kp LMETA
             >;
         };
 
-        alt_text_layer {
+        symbol {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-            &none     &none     &none          &none      &none         &none     &none    &none     &tog ALT_TEXT   &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            // HRML(S,        H,         N,         T)        xxx           xxx        HRMR(A,      E,         O,         I)
-            &kp LSHIFT &kp A &kp S &kp D &none &none &kp J &kp K &none &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-            &kp F      &kp M       &kp V      &kp C      &none         &none     &kp P        &kp X      &kp K       &kp Y
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                         &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB     &kp BSPC   &htw 0 WTILE
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
-
 };
