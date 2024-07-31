@@ -360,7 +360,7 @@
 
         default {
             bindings = <
-&kp W             &kp L           &kp R        &kp B           &kp Z        &kp Q                 &kp U           &kp D        &kp G           &kp J
+&lt 8 W           &kp L           &kp R        &kp B           &kp Z        &kp Q                 &kp U           &kp D        &kp G           &kp J
 &ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &kp DOT      &lt 3 COMMA           &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
 &kp F             &kp M           &kp V        &kp C           &sctd        &ht UNDERSCORE MINUS  &kp P           &kp X        &kp K           &kp Y
                                                &lt 5 SPACE     &lt 4 TAB    &kp BSPC              &htw 0 2
@@ -427,6 +427,15 @@
 &ht N1 G  &ht N2 H  &ht N3 J  &ht N4 K  &ht N5 L    &none  &none  &none  &none  &none
 &ht N6 B  &ht N7 N  &ht N8 M  &ht N9 P  &kp N0      &none  &none  &none  &none  &none
                               &none     &none       &none  &none
+            >;
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
