@@ -353,10 +353,10 @@
 
         default_layer {
             bindings = <
-&kp W  &kp L  &kp R  &kp B      &kp Z        &kp Q                 &kp U     &kp D  &kp G  &kp J
-&kp S  &kp H  &kp N  &kp T      &kp DOT      &lt 3 COMMA           &kp A     &kp E  &kp O  &kp I
-&kp F  &kp M  &kp V  &kp C      &sctd        &ht UNDERSCORE MINUS  &kp P     &kp X  &kp K  &kp Y
-                     &kp SPACE  &lt 4 TAB    &kp BSPC              &htw 0 2
+&kp W             &kp L           &kp R        &kp B           &kp Z        &kp Q                 &kp U           &kp D        &kp G           &kp J
+&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &kp DOT      &lt 3 COMMA           &ht A LEFT_GUI  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
+&kp F             &kp M           &kp V        &kp C           &sctd        &ht UNDERSCORE MINUS  &kp P           &kp X        &kp K           &kp Y
+                                               &lt 5 SPACE     &lt 4 TAB    &kp BSPC              &htw 0 2
             >;
         };
 
@@ -393,6 +393,15 @@
 &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
                      &none  &none    &none  &none
+            >;
+        };
+
+        navigation {
+            bindings = <
+&none  &none     &kp PG_UP  &none    &none    &none    &none      &none     &none      &none
+&none  &kp HOME  &kp LCTRL  &kp END  &none    &none    &kp LEFT   &kp UP    &kp RIGHT  &none
+&none  &none     &kp PG_DN  &none    &none    &none    &none      &kp LEFT  &none      &none
+                            &none    &none    &kp ESC  &kp ENTER
             >;
         };
     };
