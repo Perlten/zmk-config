@@ -160,75 +160,6 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
-
-        tendown: tendown {
-            label = "TEN_DOWN";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 0>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>,
-                <&macro_tap>,
-                <&kp DOWN_ARROW>;
-        };
-
-        tenup: tenup {
-            label = "TEN_UP";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 0>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_tap>,
-                <&kp UP_ARROW>;
-        };
-
-        wae: wae {
-            label = "WTILE_AE";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LMETA>,
-                <&macro_tap>,
-                <&kp _AE>,
-                <&macro_release>,
-                <&kp LMETA>;
-        };
     };
 
     behaviors {
@@ -407,7 +338,7 @@
             bindings = <
 &none  &none     &kp PG_UP  &none    &none    &none    &none      &none     &none      &none
 &none  &kp HOME  &kp LCTRL  &kp END  &none    &none    &kp LEFT   &kp UP    &kp RIGHT  &none
-&none  &none     &kp PG_DN  &none    &none    &none    &none      &kp LEFT  &none      &none
+&none  &none     &kp PG_DN  &none    &none    &none    &none      &kp DOWN  &none      &none
                             &none    &none    &kp ESC  &kp ENTER
             >;
         };
@@ -432,10 +363,10 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+                     &none  &none    &none  &none
             >;
         };
     };
