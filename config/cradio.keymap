@@ -26,8 +26,6 @@
 #define ALT_TEXT 13
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1 &ht LALT k2   &ht LCTRL k3 &ht RGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht LALT k3  &ht RSHFT k4  
 
 /*                KEY POSITIONS
 
@@ -39,41 +37,11 @@
               ╰────────╯ ╰────────╯            */
 
 
-#define COMBO(NAME, BINDINGS, KEYPOS) \
-combo_##NAME { \
-    timeout-ms = <30>; \
-    bindings = <BINDINGS>; \
-    key-positions = <KEYPOS>; \
-    layers = <13>; \
-};
-
-
-
 &caps_word {
     continue-list = <_UNDERSCORE _MINUS BSPC>;
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        // combo_u {
-        //     timeout-ms = <30>;
-        //     key-positions = <13 16>;
-        //     bindings = <&kp U>;
-        //     layers = <13>;
-        // };
-
-        COMBO(w, &kp W, 20 29)
-        COMBO(l, &kp L, 21 28)
-        COMBO(r, &kp R, 22 27)
-        COMBO(b, &kp B, 23 26)
-
-        COMBO(u, &kp U, 13 16)
-        COMBO(d, &kp D, 12 17)
-        COMBO(g, &kp G, 11 18)
-        COMBO(j, &kp J, 10 19)
-    };
-
     macros {
         lm: lm {
             label = "LAYER_MOD";
@@ -326,7 +294,7 @@ combo_##NAME { \
         default_layer { 
             bindings = <
             &lt MEDIA W   &kp L      &kp R      &kp B      &kp Z             &kp Q                    &kp U    &kp D      &kp G    &lt MEDIA J
-            HRML(S,        H,         N,         T)        &ht _QMARK DOT    &lt NUMBER COMMA        HRMR(A,      E,         O,         I)
+            &ht LSHFT &kp S &ht LALT &kp H &ht LCTRL &kp N &ht RGUI &kp T    &ht _QMARK DOT    &lt NUMBER COMMA &ht RGUI &kp A &ht LCTRL &kp E &ht LALT &kp O &ht LSHFT &kp I
             &kp F         &kp M      &kp V      &kp C      &sctd             &ht _UNDERSCORE _MINUS   &kp P    &kp X      &kp K    &kp Y
                        &lt NAVIGATION SPACE &tabsymtap SYMBOL TAB            &kp BSPC   &htw 0 WTILE
         //           ╰─────────────────────┴─────────────────────╯          ╰──────────┴──────────╯
