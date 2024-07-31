@@ -273,10 +273,10 @@
 
         default {
             bindings = <
-&lt 8 W           &kp L           &kp R        &kp B           &kp Z        &kp Q                 &kp U           &kp D        &kp G           &kp J
-&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &kp DOT      &lt 3 COMMA           &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
-&kp F             &kp M           &kp V        &kp C           &sctd        &ht UNDERSCORE MINUS  &kp P           &kp X        &kp K           &kp Y
-                                               &lt 5 SPACE     &lt 4 TAB    &kp BSPC              &htw 0 2
+&lt 8 W           &kp L           &kp R        &kp B           &kp Z        &kp Q              &kp U           &kp D        &kp G           &kp J
+&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &kp DOT      &lt 3 COMMA        &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
+&kp F             &kp M           &kp V        &kp C           &sctd        &ht LS(FSLH) FSLH  &kp P           &kp X        &kp K           &kp Y
+                                               &lt 5 SPACE     &lt 4 TAB    &kp BSPC           &htw 0 2
             >;
         };
 
@@ -345,10 +345,10 @@
 
         media {
             bindings = <
-&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none    &none  &none  &none  &none  &none
-                     &none  &none    &none  &none
+&none  &none  &none  &none              &none           &none  &none           &none       &none             &none
+&none  &none  &none  &kp C_VOLUME_DOWN  &kp C_VOL_UP    &none  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE  &none
+&none  &none  &none  &none              &none           &none  &kp C_MUTE      &none       &none             &none
+                     &none              &none           &none  &none
             >;
         };
     };
