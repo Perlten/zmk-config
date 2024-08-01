@@ -333,9 +333,9 @@
         };
 
         toggle_gamer {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <16 17 18 19>;
-            layers = <0 6>;
+            layers = <0 7>;
         };
     };
 
@@ -346,7 +346,7 @@
 
         default {
             bindings = <
-&lt 8 W           &kp L           &kp R        &kp B           &kp Z                  &kp Q              &kp U           &kp D        &kp G           &lt 9 J
+&lt 9 W           &kp L           &kp R        &kp B           &kp Z                  &kp Q              &kp U           &kp D        &kp G           &lt 10 J
 &ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &kp DOT                &lt 3 COMMA        &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
 &kp F             &kp M           &kp V        &kp C           &sctd                  &ht LS(FSLH) FSLH  &kp P           &kp X        &kp K           &kp Y
                                                &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC           &htw 0 2
@@ -391,10 +391,19 @@
 
         navigation {
             bindings = <
-&none   &none     &kp PG_UP  &none    &none    &none    &none      &none      &none       &none
-&trans  &kp HOME  &kp LCTRL  &kp END  &none    &none    &ten_left  &ten_up    &ten_right  &none
-&none   &none     &kp PG_DN  &none    &none    &none    &none      &ten_down  &none       &none
+&none   &none     &kp PG_UP  &none    &none    &none    &none      &none     &none      &none
+&trans  &kp HOME  &mo 6      &kp END  &none    &none    &kp LEFT   &kp UP    &kp RIGHT  &none
+&none   &none     &kp PG_DN  &none    &none    &none    &none      &kp DOWN  &none      &none
                              &none    &none    &kp ESC  &kp ENTER
+            >;
+        };
+
+        navigation_alt {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &ten_left  &ten_up    &ten_right  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans     &ten_down  &trans      &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
 
@@ -403,7 +412,7 @@
 &ht TAB ESCAPE  &kp Q  &kp W  &kp E      &kp R            &kp N1    &kp N2    &kp N3  &kp N4     &kp N5
 &kp LSHFT       &kp A  &kp S  &kp D      &kp F            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
 &kp LCTRL       &kp Z  &kp X  &kp C      &kp V            &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
-                              &kp SPACE  &kp_sl LALT 7    &none     &none
+                              &kp SPACE  &kp_sl LALT 8    &none     &none
             >;
         };
 
