@@ -180,21 +180,30 @@
         ten_down: ten_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            bindings =
+                <&macro_tap_time 0>,
+                <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+
             label = "TEN_DOWN";
         };
 
         ten_up: ten_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+            bindings =
+                <&macro_tap_time 0>,
+                <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+
             label = "TEN_UP";
         };
 
         ten_left: ten_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            bindings =
+                <&macro_tap_time 0>,
+                <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+
             label = "TEN_LEFT";
         };
 
