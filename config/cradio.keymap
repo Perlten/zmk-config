@@ -184,7 +184,7 @@
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&macro_tap>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "TEN_TAP";
         };
