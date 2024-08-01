@@ -177,16 +177,11 @@
             label = "AE";
         };
 
-        ten_tap: ten_tap {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "TEN_TAP";
+        ten_down: ten_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
+            label = "TEN_DOWN";
         };
     };
 
@@ -283,42 +278,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
-
-        ten_up: ten_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TEN_UP";
-            bindings = <&kp UP_ARROW>, <&ten_tap UP_ARROW>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        ten_down: ten_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TEN_DOWN";
-            bindings = <&kp DOWN_ARROW>, <&ten_tap DOWN_ARROW>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        ten_left: ten_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TEN_LEFT";
-            bindings = <&kp LEFT>, <&ten_tap LEFT_ARROW>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        ten_right: ten_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "TEN_RIGHT";
-            bindings = <&kp RIGHT>, <&ten_tap RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -400,9 +359,9 @@
 
         navigation_alt {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &ten_left  &ten_up    &ten_right  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans     &ten_down  &trans      &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &none   &none      &none   &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &ten_down  &trans  &trans
                         &trans  &trans    &trans  &trans
             >;
         };
