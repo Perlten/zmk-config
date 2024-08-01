@@ -183,6 +183,27 @@
             bindings = <&kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW &kp DOWN_ARROW>;
             label = "TEN_DOWN";
         };
+
+        ten_up: ten_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+            label = "TEN_UP";
+        };
+
+        ten_left: ten_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            label = "TEN_LEFT";
+        };
+
+        ten_right: ten_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
+            label = "TEN_RIGHT";
+        };
     };
 
     behaviors {
@@ -359,9 +380,9 @@
 
         navigation_alt {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &none   &none      &none   &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &ten_down  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &ten_left  &ten_up    &ten_right  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans     &ten_down  &trans      &trans
                         &trans  &trans    &trans  &trans
             >;
         };
