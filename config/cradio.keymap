@@ -374,10 +374,10 @@
 
         symbol {
             bindings = <
-&none       &none                  &ht RA(NUMBER_2) RA(NUMBER_4)  &ht EXCL RPAR      &ht LS(NUBS) NUBS    &none     &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET  &none  &none
-&kp LS(N5)  &ht PIPE LS(NUMBER_3)  &ht FSLH MINUS                 &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS    &none     &ht BSLH LS(NUMBER_2)  &ht RA(N0) RA(N7)    &none  &none
-&none       &none                  &none                          &none              &none                &none     &kp LBKT               &kp APOS             &ae    &none
-                                                                  &none              &none                &kp BSPC  &none
+&none       &none                  &ht RA(NUMBER_2) RA(NUMBER_4)  &ht EXCL RPAR      &ht LS(NUBS) NUBS    &none                  &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET  &none  &none
+&kp LS(N5)  &ht PIPE LS(NUMBER_3)  &ht FSLH MINUS                 &ht LS(N9) LS(N8)  &ht RA(NUBS) AMPS    &ht LS(DOT) LS(COMMA)  &ht BSLH LS(NUMBER_2)  &ht RA(N0) RA(N7)    &none  &none
+&none       &none                  &none                          &none              &none                &none                  &kp LBKT               &kp APOS             &ae    &none
+                                                                  &none              &none                &kp BSPC               &none
             >;
         };
 
