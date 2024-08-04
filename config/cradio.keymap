@@ -367,7 +367,7 @@
         default {
             bindings = <
 &lt 9 W           &kp L           &kp R        &kp B           &kp Z                  &kp Q              &kp U           &kp D        &kp G           &lt 10 J
-&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &kp DOT                &lt 3 COMMA        &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
+&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &ht LS(MINUS) DOT      &lt 3 COMMA        &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
 &kp F             &kp M           &kp V        &kp C           &sctd                  &ht LS(FSLH) FSLH  &kp P           &kp X        &kp K           &kp Y
                                                &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC           &htw 0 2
             >;
