@@ -366,19 +366,19 @@
 
         default {
             bindings = <
-&lt 9 W           &kp L           &kp R        &kp B           &kp Z                  &kp Q              &kp U           &kp D        &kp G           &lt 10 J
-&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &ht LS(MINUS) DOT      &lt 3 COMMA        &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
-&kp F             &kp M           &kp V        &kp C           &sctd                  &ht LS(FSLH) FSLH  &kp P           &kp X        &kp K           &kp Y
-                                               &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC           &htw 0 2
+&lt 9 W           &kp L           &kp R        &kp B           &kp Z                  &kp Q                 &kp U           &kp D        &kp G           &lt 10 J
+&ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &ht QUESTION PERIOD    &lt 3 COMMA           &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
+&kp F             &kp M           &kp V        &kp C           &sctd                  &ht UNDERSCORE MINUS  &kp P           &kp X        &kp K           &kp Y
+                                               &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC              &htw 0 2
             >;
         };
 
         mouse {
             bindings = <
-&none      &none  &kp W  &none      &none    &none  &none  &none  &none  &none
-&kp LSHFT  &kp A  &kp S  &kp D      &none    &none  &kp J  &kp K  &none  &none
-&kp LCTRL  &none  &none  &none      &none    &none  &none  &none  &none  &none
-                         &kp SPACE  &kp P    &none  &none
+&none             &none  &kp W  &none      &none    &none  &none  &none  &none  &none
+&kp LSHFT         &kp A  &kp S  &kp D      &none    &none  &kp J  &kp K  &none  &none
+&kp LEFT_COMMAND  &none  &none  &none      &none    &none  &none  &none  &none  &none
+                                &kp SPACE  &kp P    &none  &none
             >;
         };
 
@@ -402,10 +402,10 @@
 
         symbol {
             bindings = <
-&none       &none                  &ht RA(NUMBER_2) RA(NUMBER_4)  &ht EXCL RPAR               &ht LS(NUBS) NUBS    &none                  &ht RA(N9) RA(N8)      &ht RA(EQUAL) CARET         &none  &none
-&kp LS(N5)  &ht PIPE LS(NUMBER_3)  &ht FSLH MINUS                 &ht RIGHT_PARENTHESIS LPAR  &ht RA(NUBS) AMPS    &ht LS(DOT) LS(COMMA)  &ht BSLH LS(NUMBER_2)  &ht RIGHT_BRACE LEFT_BRACE  &none  &none
-&none       &none                  &none                          &none                       &none                &none                  &kp LBKT               &kp APOS                    &ae    &none
-                                                                  &none                       &none                &kp BSPC               &none
+&none            &none                  &ht AT_SIGN DOLLAR  &ht EXCLAMATION EQUAL       &ht GREATER_THAN LESS_THAN    &none                &ht RIGHT_BRACKET LEFT_BRACKET  &ht PIPE AMPERSAND          &none  &none
+&kp LS(PERCENT)  &ht ASTERISK NUMBER_3  &ht MINUS PLUS      &ht RIGHT_PARENTHESIS LPAR  &ht NON_US_BACKSLASH SLASH    &ht COLON SEMICOLON  &ht SQT DOUBLE_QUOTES           &ht RIGHT_BRACE LEFT_BRACE  &none  &none
+&none            &none                  &none               &none                       &none                         &none                &ht GRAVE TILDE                 &none                       &ae    &none
+                                                            &none                       &none                         &kp BSPC             &none
             >;
         };
 
