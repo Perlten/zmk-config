@@ -402,10 +402,10 @@
 
         symbol {
             bindings = <
-&none            &none                  &ht AT_SIGN DOLLAR  &ht EXCLAMATION EQUAL       &ht GREATER_THAN LESS_THAN    &none                &ht RIGHT_BRACKET LEFT_BRACKET  &ht PIPE AMPERSAND          &none  &none
-&kp LS(PERCENT)  &ht ASTERISK NUMBER_3  &ht MINUS PLUS      &ht RIGHT_PARENTHESIS LPAR  &ht NON_US_BACKSLASH SLASH    &ht COLON SEMICOLON  &ht SQT DOUBLE_QUOTES           &ht RIGHT_BRACE LEFT_BRACE  &none  &none
-&none            &none                  &none               &none                       &none                         &none                &ht GRAVE TILDE                 &none                       &ae    &none
-                                                            &none                       &none                         &kp BSPC             &none
+&none            &none              &ht AT_SIGN DOLLAR  &ht EXCLAMATION EQUAL       &ht GREATER_THAN LESS_THAN    &none                &ht RIGHT_BRACKET LEFT_BRACKET  &ht PIPE AMPERSAND          &none            &none
+&kp LS(PERCENT)  &ht ASTERISK HASH  &ht MINUS PLUS      &ht RIGHT_PARENTHESIS LPAR  &ht NON_US_BACKSLASH SLASH    &ht COLON SEMICOLON  &ht SQT DOUBLE_QUOTES           &ht RIGHT_BRACE LEFT_BRACE  &ht GRAVE TILDE  &none
+&none            &none              &none               &none                       &none                         &none                &none                           &none                       &ae              &none
+                                                        &none                       &none                         &kp BSPC             &none
             >;
         };
 
