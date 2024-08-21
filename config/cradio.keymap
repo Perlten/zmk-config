@@ -338,12 +338,6 @@
             key-positions = <16 17 18 19>;
             layers = <0 7>;
         };
-
-        hibernate {
-            bindings = <&hibernate>;
-            key-positions = <3 4 6 5>;
-            layers = <0>;
-        };
     };
 
     keymap {
