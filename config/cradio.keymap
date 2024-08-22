@@ -365,10 +365,10 @@
 
         wtile {
             bindings = <
-&wtquit       &wtadd        &none         &none         &none           &none      &htwcwin N9 N9  &none           &wtremove       &kp PAUSE_BREAK
-&htwcw N1 N1  &htwcw N2 N2  &htwcw N3 N3  &htwcw N4 N4  &htwcw N5 N5    &none      &htwcwin N1 N1  &htwcwin N2 N2  &htwcwin N3 N3  &htwcwin N4 N4
-&htwcw N6 N6  &htwcw N7 N7  &htwcw N8 N8  &htwcw N9 N9  &none           &none      &htwcwin N5 N5  &htwcwin N6 N6  &htwcwin N7 N7  &htwcwin N8 N8
-                                          &wcw Q        &wcwin Q        &kp LSHFT  &kp LMETA
+&wtquit                               &wtadd                          &none                           &none                                 &none                       &none      &htwcwin N9 N9  &none           &wtremove       &kp PAUSE_BREAK
+&htwcw LS(LA(NUMBER_1)) LA(NUMBER_1)  &htwcw LS(LA(NUMBER_2)) LA(N2)  &htwcw LA(LS(NUMBER_3)) LA(N3)  &htwcw LS(LA(NUMBER_4)) RA(NUMBER_4)  &htwcw LS(LA(N5)) LA(N5)    &none      &htwcwin N1 N1  &htwcwin N2 N2  &htwcwin N3 N3  &htwcwin N4 N4
+&htwcw LS(LA(NUMBER_6)) LA(NUMBER_6)  &htwcw LA(LS(N7)) LA(N7)        &htwcw LS(LA(N8)) LA(N8)        &htwcw LS(LA(N9)) LA(N9)              &none                       &none      &htwcwin N5 N5  &htwcwin N6 N6  &htwcwin N7 N7  &htwcwin N8 N8
+                                                                                                      &wcw LA(TAB)                          &wcwin Q                    &kp LSHFT  &kp LMETA
             >;
         };
 
