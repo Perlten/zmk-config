@@ -45,14 +45,14 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1>,
+                <&mo 2>,
                 <&macro_press>,
                 <&kp F13>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp F13>,
                 <&macro_release>,
-                <&mo 1>;
+                <&mo 2>;
         };
 
         wtquit: wtquit {
@@ -213,7 +213,7 @@
         oo: oo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap_time 0>, <&none &kp COLON &kp O &kp O>;
+            bindings = <&macro_tap_time 0>, <&none &kp COLON &kp O &kp E>;
 
             label = "OO";
         };
@@ -350,7 +350,7 @@
 &lt 9 W           &kp L           &kp R        &kp B           &kp Z                  &kp Q                 &kp U           &kp D        &kp G           &lt 10 J
 &ht LEFT_SHIFT S  &ht LEFT_ALT H  &ht LCTRL N  &ht LEFT_GUI T  &ht QUESTION PERIOD    &lt 3 COMMA           &ht LEFT_GUI A  &ht LCTRL E  &ht LEFT_ALT O  &ht LSHFT I
 &kp F             &kp M           &kp V        &kp C           &sctd                  &ht UNDERSCORE MINUS  &kp P           &kp X        &kp K           &kp Y
-                                               &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC              &htw 0 2
+                                               &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC              &htw 0 3
             >;
         };
 
@@ -368,7 +368,7 @@
 &wtquit                               &wtadd                          &none                           &none                                 &none                       &none      &htwcwin N9 N9  &none           &wtremove       &kp PAUSE_BREAK
 &htwcw LS(LA(NUMBER_1)) LA(NUMBER_1)  &htwcw LS(LA(NUMBER_2)) LA(N2)  &htwcw LA(LS(NUMBER_3)) LA(N3)  &htwcw LS(LA(NUMBER_4)) RA(NUMBER_4)  &htwcw LS(LA(N5)) LA(N5)    &none      &htwcwin N1 N1  &htwcwin N2 N2  &htwcwin N3 N3  &htwcwin N4 N4
 &htwcw LS(LA(NUMBER_6)) LA(NUMBER_6)  &htwcw LA(LS(N7)) LA(N7)        &htwcw LS(LA(N8)) LA(N8)        &htwcw LS(LA(N9)) LA(N9)              &none                       &none      &htwcwin N5 N5  &htwcwin N6 N6  &htwcwin N7 N7  &htwcwin N8 N8
-                                                                                                      &wcw LA(TAB)                          &wcwin Q                    &kp LSHFT  &kp LMETA
+                                                                                                      &wcw LA(TAB)                          &wcwin Q                    &kp LSHFT  &none
             >;
         };
 
