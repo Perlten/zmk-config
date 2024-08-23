@@ -365,7 +365,7 @@
 
         wtile {
             bindings = <
-&wtquit                            &wtadd                       &none                        &none                              &none                    &none  &none  &none  &wtremove  &none
+&kp LA(LG(ESCAPE))                 &wtadd                       &none                        &none                              &none                    &none  &none  &none  &wtremove  &none
 &ht LS(LA(NUMBER_1)) LA(NUMBER_1)  &ht LS(LA(NUMBER_2)) LA(N2)  &ht LA(LS(NUMBER_3)) LA(N3)  &ht LS(LA(NUMBER_4)) RA(NUMBER_4)  &ht LS(LA(N5)) LA(N5)    &none  &none  &none  &none      &none
 &ht LS(LA(NUMBER_6)) LA(NUMBER_6)  &ht LA(LS(N7)) LA(N7)        &ht LS(LA(N8)) LA(N8)        &ht LS(LA(N9)) LA(N9)              &none                    &none  &none  &none  &none      &none
                                                                                              &kp LA(TAB)                        &none                    &none  &none
