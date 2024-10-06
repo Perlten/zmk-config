@@ -320,6 +320,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        tab_esc_td: tab_esc_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_ESC_TD";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESCAPE>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -347,7 +354,7 @@
 
         default {
             bindings = <
-&lt 9 W           &kp L        &kp R           &kp B           &kp Z                  &kp Q                 &kp U           &kp D       &kp G        &lt 10 J
+&lt 10 W          &kp L        &kp R           &kp B           &kp Z                  &kp Q                 &kp U           &kp D       &kp G        &lt 11 J
 &ht LEFT_SHIFT S  &ht LCTRL H  &ht LEFT_ALT N  &ht LEFT_GUI T  &ht QUESTION PERIOD    &lt 3 COMMA           &ht LEFT_GUI A  &ht LALT E  &ht LCTRL O  &ht LSHFT I
 &kp F             &kp M        &kp V           &kp C           &sctd                  &ht UNDERSCORE MINUS  &kp P           &kp X       &kp K        &kp Y
                                                &lt 5 SPACE     &lt_hold_pref 4 TAB    &kp BSPC              &htw 0 2
@@ -410,19 +417,28 @@
 
         gamer {
             bindings = <
-&ht TAB ESCAPE  &kp Q  &kp W  &kp E      &kp R            &kp N1    &kp N2    &kp N3  &kp N4     &kp N5
-&kp LSHFT       &kp A  &kp S  &kp D      &kp F            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-&kp LCTRL       &kp Z  &kp X  &kp C      &kp V            &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
-                              &kp SPACE  &kp_sl LALT 8    &none     &none
+&tab_esc_td  &kp Q  &kp W  &kp E      &kp R            &kp N1    &kp N2    &kp N3  &kp N4     &kp N5
+&kp LSHFT    &kp A  &kp S  &kp D      &kp F            &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
+&kp LCTRL    &kp Z  &kp X  &kp C      &kp V            &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+                           &kp SPACE  &kp_sl LALT 8    &none     &none
             >;
         };
 
         gamer_right {
             bindings = <
-&kp T     &kp Y     &kp U     &kp I     &kp O       &none  &none  &none  &none  &none
-&ht N1 G  &ht N2 H  &ht N3 J  &ht N4 K  &ht N5 L    &none  &none  &none  &none  &none
-&ht N6 B  &ht N7 N  &ht N8 M  &ht N9 P  &kp N0      &none  &none  &none  &none  &none
-                              &none     &none       &none  &none
+&kp T  &kp Y  &kp U  &kp I      &kp O    &none  &none  &none  &none  &none
+&kp G  &kp H  &kp J  &kp K      &kp L    &none  &none  &none  &none  &none
+&kp B  &kp N  &kp M  &kp P      &none    &none  &none  &none  &none  &none
+                     &kp ENTER  &sl 9    &none  &none
+            >;
+        };
+
+        gamer_number {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans
+&kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
 
