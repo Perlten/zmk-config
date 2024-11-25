@@ -399,10 +399,10 @@
 
         navigation {
             bindings = <
-&none   &none     &kp PG_UP  &none    &none    &none    &none      &none     &none      &none
-&trans  &kp HOME  &mo 6      &kp END  &none    &none    &kp LEFT   &kp UP    &kp RIGHT  &none
-&none   &none     &kp PG_DN  &none    &none    &none    &none      &kp DOWN  &none      &none
-                             &none    &none    &kp ESC  &kp ENTER
+&none   &none     &kp PG_UP  &none    &none    &none              &none      &none     &none      &none
+&trans  &kp HOME  &mo 6      &kp END  &none    &none              &kp LEFT   &kp UP    &kp RIGHT  &none
+&none   &none     &kp PG_DN  &none    &none    &none              &none      &kp DOWN  &none      &none
+                             &none    &none    &ht DELETE ESCAPE  &kp ENTER
             >;
         };
 
